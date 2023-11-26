@@ -1,0 +1,926 @@
+{
+  "items": [
+    {
+      "modified": {
+        "time": "2023-11-15T16:51:29.000Z"
+      },
+      "_id": "655494a103f63c57cb95e22c",
+      "name": "Robbie Williams Live at Knebworth",
+      "slug": "robbie-williams-live-at-knebworth",
+      "origin_name": "Robbie Williams Live at Knebworth",
+      "type": "single",
+      "thumb_url": "robbie-williams-live-at-knebworth-thumb.jpg",
+      "poster_url": "robbie-williams-live-at-knebworth-poster.jpg",
+      "sub_docquyen": false,
+      "chieurap": false,
+      "time": "1g 16phút",
+      "episode_current": "Full",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "year": 2003,
+      "category": [
+        {
+          "id": "620a22bae0fc277084dfd585",
+          "name": "Âm Nhạc",
+          "slug": "am-nhac"
+        }
+      ],
+      "country": [
+        {
+          "id": "620a2370e0fc277084dfd91e",
+          "name": "Anh",
+          "slug": "anh"
+        }
+      ]
+    },
+    {
+      "modified": {
+        "time": "2023-11-15T16:50:56.000Z"
+      },
+      "_id": "6554948003f63c57cb95dfde",
+      "name": "Matt Rife: Chọn lọc tự nhiên",
+      "slug": "matt-rife-chon-loc-tu-nhien",
+      "origin_name": "Matt Rife: Natural Selection",
+      "type": "single",
+      "thumb_url": "matt-rife-chon-loc-tu-nhien-thumb.jpg",
+      "poster_url": "matt-rife-chon-loc-tu-nhien-poster.jpg",
+      "sub_docquyen": false,
+      "chieurap": false,
+      "time": "1g 4phút",
+      "episode_current": "Full",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "year": 2023,
+      "category": [
+        {
+          "id": "620a221de0fc277084dfd1c1",
+          "name": "Hài Hước",
+          "slug": "hai-huoc"
+        }
+      ],
+      "country": [
+        {
+          "id": "620a231fe0fc277084dfd7ce",
+          "name": "Âu Mỹ",
+          "slug": "au-my"
+        }
+      ]
+    },
+    {
+      "modified": {
+        "time": "2023-11-15T12:14:13.000Z"
+      },
+      "_id": "6464b2a89b6b2c58a9f5ccda",
+      "name": "Biệt Đội Marvel",
+      "slug": "biet-doi-marvel",
+      "origin_name": "The Marvels",
+      "type": "single",
+      "thumb_url": "biet-doi-marvel-thumb.jpg",
+      "poster_url": "biet-doi-marvel-poster.jpg",
+      "sub_docquyen": true,
+      "chieurap": true,
+      "time": "105 Phút",
+      "episode_current": "Full",
+      "quality": "CAM",
+      "lang": "Vietsub",
+      "year": 2023,
+      "category": [
+        {
+          "id": "620a21b2e0fc277084dfd0c5",
+          "name": "Hành Động",
+          "slug": "hanh-dong"
+        },
+        {
+          "id": "620a2282e0fc277084dfd435",
+          "name": "Viễn Tưởng",
+          "slug": "vien-tuong"
+        },
+        {
+          "id": "620a2293e0fc277084dfd489",
+          "name": "Phiêu Lưu",
+          "slug": "phieu-luu"
+        },
+        {
+          "id": "620a229be0fc277084dfd4dd",
+          "name": "Khoa Học",
+          "slug": "khoa-hoc"
+        }
+      ],
+      "country": [
+        {
+          "id": "620a231fe0fc277084dfd7ce",
+          "name": "Âu Mỹ",
+          "slug": "au-my"
+        }
+      ]
+    },
+    {
+      "modified": {
+        "time": "2023-11-15T08:56:36.000Z"
+      },
+      "_id": "6552d32eaa7d07ce5c845a17",
+      "name": "Kẻ Kiến Tạo",
+      "slug": "ke-kien-tao",
+      "origin_name": "The Creator",
+      "type": "single",
+      "thumb_url": "ke-kien-tao-thumb.jpg",
+      "poster_url": "ke-kien-tao-poster.jpg",
+      "sub_docquyen": false,
+      "chieurap": true,
+      "time": "134 Phút",
+      "episode_current": "Full",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "year": 2023,
+      "category": [
+        {
+          "id": "620a21b2e0fc277084dfd0c5",
+          "name": "Hành Động",
+          "slug": "hanh-dong"
+        },
+        {
+          "id": "620a2282e0fc277084dfd435",
+          "name": "Viễn Tưởng",
+          "slug": "vien-tuong"
+        },
+        {
+          "id": "620a229be0fc277084dfd4dd",
+          "name": "Khoa Học",
+          "slug": "khoa-hoc"
+        }
+      ],
+      "country": [
+        {
+          "id": "620a231fe0fc277084dfd7ce",
+          "name": "Âu Mỹ",
+          "slug": "au-my"
+        },
+        {
+          "id": "620a2381e0fc277084dfd9c6",
+          "name": "Canada",
+          "slug": "canada"
+        }
+      ]
+    },
+    {
+      "modified": {
+        "time": "2023-11-14T21:09:05.000Z"
+      },
+      "_id": "65537f7faa7d07ce5c8609ce",
+      "name": "American Ninja",
+      "slug": "american-ninja",
+      "origin_name": "American Ninja",
+      "type": "single",
+      "thumb_url": "american-ninja-thumb.jpg",
+      "poster_url": "american-ninja-poster.jpg",
+      "sub_docquyen": false,
+      "chieurap": false,
+      "time": "95 Phút",
+      "episode_current": "Full",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "year": 1985,
+      "category": [
+        {
+          "id": "620a21b2e0fc277084dfd0c5",
+          "name": "Hành Động",
+          "slug": "hanh-dong"
+        }
+      ],
+      "country": [
+        {
+          "id": "620a231fe0fc277084dfd7ce",
+          "name": "Âu Mỹ",
+          "slug": "au-my"
+        }
+      ]
+    },
+    {
+      "modified": {
+        "time": "2023-11-14T21:08:03.000Z"
+      },
+      "_id": "65537f4103f63c57cb940842",
+      "name": "Quỷ Đả Quỷ ",
+      "slug": "quy-da-quy",
+      "origin_name": "Quỷ Đả Quỷ ",
+      "type": "single",
+      "thumb_url": "quy-da-quy-thumb.jpg",
+      "poster_url": "quy-da-quy-poster.jpg",
+      "sub_docquyen": false,
+      "chieurap": false,
+      "time": "1h 42m",
+      "episode_current": "Full",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "year": 1980,
+      "category": [
+        {
+          "id": "620a22ace0fc277084dfd531",
+          "name": "Kinh Dị",
+          "slug": "kinh-di"
+        },
+        {
+          "id": "620a21b2e0fc277084dfd0c5",
+          "name": "Hành Động",
+          "slug": "hanh-dong"
+        }
+      ],
+      "country": [
+        {
+          "id": "620a2347e0fc277084dfd876",
+          "name": "Hồng Kông",
+          "slug": "hong-kong"
+        }
+      ]
+    },
+    {
+      "modified": {
+        "time": "2023-11-14T21:02:36.000Z"
+      },
+      "_id": "65537dfaaa7d07ce5c85fe93",
+      "name": "Cô gái mùa hè",
+      "slug": "co-gai-mua-he",
+      "origin_name": "Julia ",
+      "type": "single",
+      "thumb_url": "co-gai-mua-he-thumb.jpg",
+      "poster_url": "co-gai-mua-he-poster.jpg",
+      "sub_docquyen": false,
+      "chieurap": false,
+      "time": "1h 28m",
+      "episode_current": "Full",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "year": 1974,
+      "category": [
+        {
+          "id": "620f3d2b91fa4af90ab697fe",
+          "name": "Chính kịch",
+          "slug": "chinh-kich"
+        },
+        {
+          "id": "620a220de0fc277084dfd16d",
+          "name": "Tình Cảm",
+          "slug": "tinh-cam"
+        }
+      ],
+      "country": [
+        {
+          "id": "620e0e8fd9648f114cde77f7",
+          "name": "Đức",
+          "slug": "duc"
+        },
+        {
+          "id": "620a2378e0fc277084dfd972",
+          "name": "Pháp",
+          "slug": "phap"
+        }
+      ]
+    },
+    {
+      "modified": {
+        "time": "2023-11-14T20:57:02.000Z"
+      },
+      "_id": "65537cadaa7d07ce5c85f782",
+      "name": "Nazi Love Camp 27",
+      "slug": "nazi-love-camp-27",
+      "origin_name": "Nazi Love Camp 27",
+      "type": "single",
+      "thumb_url": "nazi-love-camp-27-thumb.jpg",
+      "poster_url": "nazi-love-camp-27-poster.jpg",
+      "sub_docquyen": false,
+      "chieurap": false,
+      "time": "85 Phút",
+      "episode_current": "Full",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "year": 1977,
+      "category": [
+        {
+          "id": "620f3d2b91fa4af90ab697fe",
+          "name": "Chính kịch",
+          "slug": "chinh-kich"
+        }
+      ],
+      "country": [
+        {
+          "id": "621674a770b58bba6858b852",
+          "name": "Ý",
+          "slug": "y"
+        }
+      ]
+    },
+    {
+      "modified": {
+        "time": "2023-11-14T20:55:49.000Z"
+      },
+      "_id": "65537c62aa7d07ce5c85f3cf",
+      "name": "One Deadly Summer",
+      "slug": "one-deadly-summer",
+      "origin_name": "One Deadly Summer",
+      "type": "single",
+      "thumb_url": "one-deadly-summer-thumb.jpg",
+      "poster_url": "one-deadly-summer-poster.jpg",
+      "sub_docquyen": false,
+      "chieurap": false,
+      "time": "130 Phút",
+      "episode_current": "Full",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "year": 1983,
+      "category": [
+        {
+          "id": "620f3d2b91fa4af90ab697fe",
+          "name": "Chính kịch",
+          "slug": "chinh-kich"
+        },
+        {
+          "id": "620f84d291fa4af90ab6b3f4",
+          "name": "Bí ẩn",
+          "slug": "bi-an"
+        }
+      ],
+      "country": [
+        {
+          "id": "620a2378e0fc277084dfd972",
+          "name": "Pháp",
+          "slug": "phap"
+        }
+      ]
+    },
+    {
+      "modified": {
+        "time": "2023-11-14T20:54:18.000Z"
+      },
+      "_id": "65537c08aa7d07ce5c85ef8c",
+      "name": "Phong Ấn Thứ Bảy",
+      "slug": "phong-an-thu-bay",
+      "origin_name": "The Seventh Seal",
+      "type": "single",
+      "thumb_url": "phong-an-thu-bay-thumb.jpg",
+      "poster_url": "phong-an-thu-bay-poster.jpg",
+      "sub_docquyen": false,
+      "chieurap": false,
+      "time": "96 Phút",
+      "episode_current": "Full",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "year": 1957,
+      "category": [
+        {
+          "id": "620f3d2b91fa4af90ab697fe",
+          "name": "Chính kịch",
+          "slug": "chinh-kich"
+        }
+      ],
+      "country": [
+        {
+          "id": "62135e8d1f1609c9d9346c8a",
+          "name": "Thụy Điển",
+          "slug": "thuy-dien"
+        }
+      ]
+    },
+    {
+      "modified": {
+        "time": "2023-11-14T20:52:47.000Z"
+      },
+      "_id": "65537badaa7d07ce5c85eb39",
+      "name": "Thiên thần tình dục",
+      "slug": "thien-than-tinh-duc",
+      "origin_name": "Angels of Sex",
+      "type": "single",
+      "thumb_url": "thien-than-tinh-duc-thumb.jpg",
+      "poster_url": "thien-than-tinh-duc-poster.jpg",
+      "sub_docquyen": false,
+      "chieurap": false,
+      "time": "105 Phút",
+      "episode_current": "Full",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "year": 2012,
+      "category": [
+        {
+          "id": "620f3d2b91fa4af90ab697fe",
+          "name": "Chính kịch",
+          "slug": "chinh-kich"
+        }
+      ],
+      "country": [
+        {
+          "id": "620e0ea0d9648f114cde784b",
+          "name": "Tây Ban Nha",
+          "slug": "tay-ban-nha"
+        }
+      ]
+    },
+    {
+      "modified": {
+        "time": "2023-11-14T20:51:03.000Z"
+      },
+      "_id": "65537b4503f63c57cb93e80e",
+      "name": "Vịnh Xuân Quyền",
+      "slug": "vinh-xuan-quyen",
+      "origin_name": "Wing Chun",
+      "type": "single",
+      "thumb_url": "vinh-xuan-quyen-thumb.jpg",
+      "poster_url": "vinh-xuan-quyen-poster.jpg",
+      "sub_docquyen": false,
+      "chieurap": false,
+      "time": "93 Phút",
+      "episode_current": "Full",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "year": 1994,
+      "category": [
+        {
+          "id": "620a21b2e0fc277084dfd0c5",
+          "name": "Hành Động",
+          "slug": "hanh-dong"
+        },
+        {
+          "id": "620a221de0fc277084dfd1c1",
+          "name": "Hài Hước",
+          "slug": "hai-huoc"
+        },
+        {
+          "id": "620f3d2b91fa4af90ab697fe",
+          "name": "Chính kịch",
+          "slug": "chinh-kich"
+        }
+      ],
+      "country": [
+        {
+          "id": "62093063196e9f4ab6b448b8",
+          "name": "Trung Quốc",
+          "slug": "trung-quoc"
+        },
+        {
+          "id": "620a2347e0fc277084dfd876",
+          "name": "Hồng Kông",
+          "slug": "hong-kong"
+        }
+      ]
+    },
+    {
+      "modified": {
+        "time": "2023-11-14T19:17:25.000Z"
+      },
+      "_id": "622b33f5eb35da19972e79d7",
+      "name": "Cuộc chiến chống lại quỷ dữ ở Shushan",
+      "origin_name": "War against Demons in Shushan",
+      "type": "single",
+      "thumb_url": "cuoc-chien-chong-lai-quy-du-o-shushan-thumb.jpg",
+      "time": "1H24M15S",
+      "episode_current": "Full",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "slug": "cuoc-chien-chong-lai-quy-du-o-shushan",
+      "year": 2018,
+      "category": [
+        {
+          "id": "620a21b2e0fc277084dfd0c5",
+          "name": "Hành Động",
+          "slug": "hanh-dong"
+        },
+        {
+          "id": "620a220de0fc277084dfd16d",
+          "name": "Tình Cảm",
+          "slug": "tinh-cam"
+        },
+        {
+          "id": "620a2279e0fc277084dfd3e1",
+          "name": "Võ Thuật",
+          "slug": "vo-thuat"
+        },
+        {
+          "id": "620a2282e0fc277084dfd435",
+          "name": "Viễn Tưởng",
+          "slug": "vien-tuong"
+        }
+      ],
+      "country": [
+        {
+          "id": "62093063196e9f4ab6b448b8",
+          "name": "Trung Quốc",
+          "slug": "trung-quoc"
+        }
+      ],
+      "chieurap": false,
+      "poster_url": "cuoc-chien-chong-lai-quy-du-o-shushan-poster.jpg",
+      "sub_docquyen": false
+    },
+    {
+      "modified": {
+        "time": "2023-11-14T19:17:13.000Z"
+      },
+      "_id": "622b33e5eb35da19972e79c4",
+      "name": "Deskmate của tôi là Khuôn viên Belle",
+      "origin_name": "My Deskmate is Campus Belle",
+      "type": "single",
+      "thumb_url": "deskmate-cua-toi-la-khuon-vien-belle-thumb.jpg",
+      "time": "1H21M49S",
+      "episode_current": "Full",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "slug": "deskmate-cua-toi-la-khuon-vien-belle",
+      "year": 2018,
+      "category": [
+        {
+          "id": "620a220de0fc277084dfd16d",
+          "name": "Tình Cảm",
+          "slug": "tinh-cam"
+        }
+      ],
+      "country": [
+        {
+          "id": "62093063196e9f4ab6b448b8",
+          "name": "Trung Quốc",
+          "slug": "trung-quoc"
+        }
+      ],
+      "chieurap": false,
+      "poster_url": "deskmate-cua-toi-la-khuon-vien-belle-poster.jpg",
+      "sub_docquyen": false
+    },
+    {
+      "modified": {
+        "time": "2023-11-14T19:16:59.000Z"
+      },
+      "_id": "622b33d6eb35da19972e799c",
+      "name": "Người đàn ông không khí",
+      "origin_name": "Air Man",
+      "type": "single",
+      "thumb_url": "nguoi-dan-ong-khong-khi-thumb.jpg",
+      "time": "1H20M30S",
+      "episode_current": "Full",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "slug": "nguoi-dan-ong-khong-khi",
+      "year": 2018,
+      "category": [
+        {
+          "id": "620a2282e0fc277084dfd435",
+          "name": "Viễn Tưởng",
+          "slug": "vien-tuong"
+        }
+      ],
+      "country": [
+        {
+          "id": "62093063196e9f4ab6b448b8",
+          "name": "Trung Quốc",
+          "slug": "trung-quoc"
+        }
+      ],
+      "chieurap": false,
+      "poster_url": "nguoi-dan-ong-khong-khi-poster.jpg",
+      "sub_docquyen": false
+    },
+    {
+      "modified": {
+        "time": "2023-11-14T19:16:48.000Z"
+      },
+      "_id": "622b33c9eb35da19972e7989",
+      "name": "Người yêu nổi tiếng trên mạng của tôi",
+      "origin_name": "My Girlfriend Is a Cyber Celebrity",
+      "type": "single",
+      "thumb_url": "nguoi-yeu-noi-tieng-tren-mang-cua-toi-thumb.jpg",
+      "time": "1H6M13S",
+      "episode_current": "Full",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "slug": "nguoi-yeu-noi-tieng-tren-mang-cua-toi",
+      "year": 2017,
+      "category": [
+        {
+          "id": "620a220de0fc277084dfd16d",
+          "name": "Tình Cảm",
+          "slug": "tinh-cam"
+        },
+        {
+          "id": "620e4c0b6ba8271c5eef05a8",
+          "name": "Gia Đình",
+          "slug": "gia-dinh"
+        }
+      ],
+      "country": [
+        {
+          "id": "62093063196e9f4ab6b448b8",
+          "name": "Trung Quốc",
+          "slug": "trung-quoc"
+        }
+      ],
+      "chieurap": false,
+      "poster_url": "nguoi-yeu-noi-tieng-tren-mang-cua-toi-poster.jpg",
+      "sub_docquyen": false
+    },
+    {
+      "modified": {
+        "time": "2023-11-14T19:16:37.000Z"
+      },
+      "_id": "622b33c0eb35da19972e796b",
+      "name": "ANIMA",
+      "origin_name": "ANIMA",
+      "type": "single",
+      "thumb_url": "anima-thumb.jpg",
+      "time": "15ph",
+      "episode_current": "Full",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "slug": "anima",
+      "year": 2019,
+      "category": [
+        {
+          "id": "620a22bae0fc277084dfd585",
+          "name": "Âm Nhạc",
+          "slug": "am-nhac"
+        },
+        {
+          "id": "620f3d2b91fa4af90ab697fe",
+          "name": "Chính kịch",
+          "slug": "chinh-kich"
+        }
+      ],
+      "country": [
+        {
+          "id": "620a231fe0fc277084dfd7ce",
+          "name": "Âu Mỹ",
+          "slug": "au-my"
+        }
+      ],
+      "chieurap": false,
+      "poster_url": "anima-poster.jpg",
+      "sub_docquyen": false
+    },
+    {
+      "modified": {
+        "time": "2023-11-14T19:16:22.000Z"
+      },
+      "_id": "622b33b1eb35da19972e795f",
+      "name": "Nhà cũ nơi sơn cước",
+      "origin_name": "The Family House",
+      "type": "single",
+      "thumb_url": "nha-cu-noi-son-cuoc-thumb.jpg",
+      "time": "1H42M1S",
+      "episode_current": "Full",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "slug": "nha-cu-noi-son-cuoc",
+      "year": 2018,
+      "category": [
+        {
+          "id": "620a2238e0fc277084dfd291",
+          "name": "Tâm Lý",
+          "slug": "tam-ly"
+        },
+        {
+          "id": "620a22ace0fc277084dfd531",
+          "name": "Kinh Dị",
+          "slug": "kinh-di"
+        },
+        {
+          "id": "620f84d291fa4af90ab6b3f4",
+          "name": "Bí ẩn",
+          "slug": "bi-an"
+        }
+      ],
+      "country": [
+        {
+          "id": "62093063196e9f4ab6b448b8",
+          "name": "Trung Quốc",
+          "slug": "trung-quoc"
+        }
+      ],
+      "chieurap": false,
+      "poster_url": "nha-cu-noi-son-cuoc-poster.jpg",
+      "sub_docquyen": false
+    },
+    {
+      "modified": {
+        "time": "2023-11-14T19:16:06.000Z"
+      },
+      "_id": "622b33a4eb35da19972e794e",
+      "name": "Sảnh Hồ Truyện",
+      "origin_name": "A Fox Spirit Stroy",
+      "type": "single",
+      "thumb_url": "sanh-ho-truyen-thumb.jpg",
+      "time": "1H15M56S",
+      "episode_current": "Full",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "slug": "sanh-ho-truyen",
+      "year": 2017,
+      "category": [
+        {
+          "id": "620a21b2e0fc277084dfd0c5",
+          "name": "Hành Động",
+          "slug": "hanh-dong"
+        },
+        {
+          "id": "620a220de0fc277084dfd16d",
+          "name": "Tình Cảm",
+          "slug": "tinh-cam"
+        },
+        {
+          "id": "620a2282e0fc277084dfd435",
+          "name": "Viễn Tưởng",
+          "slug": "vien-tuong"
+        }
+      ],
+      "country": [
+        {
+          "id": "62093063196e9f4ab6b448b8",
+          "name": "Trung Quốc",
+          "slug": "trung-quoc"
+        }
+      ],
+      "chieurap": false,
+      "poster_url": "sanh-ho-truyen-poster.jpg",
+      "sub_docquyen": false
+    },
+    {
+      "modified": {
+        "time": "2023-11-14T19:15:45.000Z"
+      },
+      "_id": "622b3398eb35da19972e793c",
+      "name": "Say cũng xứng đáng",
+      "origin_name": "Guilty",
+      "type": "single",
+      "thumb_url": "say-cung-xung-dang-thumb.jpg",
+      "time": "1H4M51S",
+      "episode_current": "Full",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "slug": "say-cung-xung-dang",
+      "year": 2018,
+      "category": [
+        {
+          "id": "620a2238e0fc277084dfd291",
+          "name": "Tâm Lý",
+          "slug": "tam-ly"
+        },
+        {
+          "id": "620a2249e0fc277084dfd2e5",
+          "name": "Hình Sự",
+          "slug": "hinh-su"
+        }
+      ],
+      "country": [
+        {
+          "id": "62093063196e9f4ab6b448b8",
+          "name": "Trung Quốc",
+          "slug": "trung-quoc"
+        }
+      ],
+      "chieurap": false,
+      "poster_url": "say-cung-xung-dang-poster.jpg",
+      "sub_docquyen": false
+    },
+    {
+      "modified": {
+        "time": "2023-11-14T19:15:23.000Z"
+      },
+      "_id": "622b3366eb35da19972e78e4",
+      "name": "Atlantics",
+      "origin_name": "Atlantics",
+      "type": "single",
+      "thumb_url": "atlantics-thumb.jpg",
+      "time": "1g 46ph",
+      "episode_current": "Full",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "slug": "atlantics",
+      "year": 2019,
+      "category": [
+        {
+          "id": "620f3d2b91fa4af90ab697fe",
+          "name": "Chính kịch",
+          "slug": "chinh-kich"
+        }
+      ],
+      "country": [
+        {
+          "id": "621f64afa666e8a57f65c512",
+          "name": "Châu Phi",
+          "slug": "chau-phi"
+        }
+      ],
+      "chieurap": false,
+      "poster_url": "atlantics-poster.jpg",
+      "sub_docquyen": false
+    },
+    {
+      "modified": {
+        "time": "2023-11-14T19:15:11.000Z"
+      },
+      "_id": "622b338aeb35da19972e792a",
+      "name": "Thần bếp tiên y",
+      "origin_name": "God Assigned Chef",
+      "type": "single",
+      "thumb_url": "than-bep-tien-y-thumb.jpg",
+      "time": "1H35M56S",
+      "episode_current": "Full",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "slug": "than-bep-tien-y",
+      "year": 2016,
+      "category": [
+        {
+          "id": "620a21b2e0fc277084dfd0c5",
+          "name": "Hành Động",
+          "slug": "hanh-dong"
+        },
+        {
+          "id": "620a220de0fc277084dfd16d",
+          "name": "Tình Cảm",
+          "slug": "tinh-cam"
+        },
+        {
+          "id": "620a2282e0fc277084dfd435",
+          "name": "Viễn Tưởng",
+          "slug": "vien-tuong"
+        },
+        {
+          "id": "620a2293e0fc277084dfd489",
+          "name": "Phiêu Lưu",
+          "slug": "phieu-luu"
+        }
+      ],
+      "country": [
+        {
+          "id": "62093063196e9f4ab6b448b8",
+          "name": "Trung Quốc",
+          "slug": "trung-quoc"
+        }
+      ],
+      "chieurap": false,
+      "poster_url": "than-bep-tien-y-poster.jpg",
+      "sub_docquyen": false
+    },
+    {
+      "modified": {
+        "time": "2023-11-14T19:14:43.000Z"
+      },
+      "_id": "622b7888eb35da19972e7e57",
+      "name": "14 Ngày Phép",
+      "origin_name": "14 Days",
+      "type": "single",
+      "thumb_url": "14-ngay-phep-thumb.jpg",
+      "time": "1g 34ph",
+      "episode_current": "Full",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "slug": "14-ngay-phep",
+      "year": 2009,
+      "category": [
+        {
+          "id": "620f3d2b91fa4af90ab697fe",
+          "name": "Chính kịch",
+          "slug": "chinh-kich"
+        }
+      ],
+      "country": [
+        {
+          "id": "620a2398e0fc277084dfda1a",
+          "name": "Quốc Gia Khác",
+          "slug": "quoc-gia-khac"
+        }
+      ],
+      "chieurap": false,
+      "poster_url": "14-ngay-phep-poster.jpg",
+      "sub_docquyen": false
+    },
+    {
+      "modified": {
+        "time": "2023-11-14T19:14:22.000Z"
+      },
+      "_id": "622b784aeb35da19972e7e49",
+      "name": "Giữa khóm dương xỉ: Bản điện ảnh",
+      "origin_name": "Between Two Ferns: The Movie",
+      "type": "single",
+      "thumb_url": "giua-khom-duong-xi-ban-dien-anh-thumb.jpg",
+      "time": "1g 22ph",
+      "episode_current": "Full",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "slug": "giua-khom-duong-xi-ban-dien-anh",
+      "year": 2019,
+      "category": [
+        {
+          "id": "620a221de0fc277084dfd1c1",
+          "name": "Hài Hước",
+          "slug": "hai-huoc"
+        }
+      ],
+      "country": [
+        {
+          "id": "620a231fe0fc277084dfd7ce",
+          "name": "Âu Mỹ",
+          "slug": "au-my"
+        }
+      ],
+      "chieurap": false,
+      "poster_url": "giua-khom-duong-xi-ban-dien-anh-poster.jpg",
+      "sub_docquyen": false
+    }
+  ]
+}

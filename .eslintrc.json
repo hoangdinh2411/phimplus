@@ -1,0 +1,24 @@
+{
+  "extends": "next/core-web-vitals",
+  "plugins": ["mui-path-imports"],
+  "rules": {
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": ["@mui/material/*/*"]
+      }
+    ],
+    "mui-path-imports/mui-path-imports": "error",
+    "no-duplicate-imports": "error",
+    "no-unused-vars": [
+      "error",
+      {
+        "args": "none",
+        "varsIgnorePattern": "error"
+      }
+    ],
+    "no-unused-labels": "error",
+    "no-unused-expressions": "error",
+    "no-use-before-define": "error"
+  }
+}

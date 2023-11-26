@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: mandatory;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #0d0c11;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hide {
+  display: none;
+}
+
+p,
+span {
+  display: block;
+}
