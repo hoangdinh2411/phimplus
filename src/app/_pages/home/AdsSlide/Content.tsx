@@ -65,6 +65,7 @@ export default function Content({ item }: Props) {
             width: '100%',
             height: '100%',
           }}
+          prefetch={false}
         >
           <Image
             src={item.poster_url}
@@ -99,6 +100,7 @@ export default function Content({ item }: Props) {
           style={{
             color: 'inherit',
           }}
+          prefetch={false}
         >
           <Tag title='TOP' />
           <Typography
