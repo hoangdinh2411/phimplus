@@ -11,7 +11,7 @@ const AboutMovie = dynamic(() => import('./AboutMovie'), {
 export default function Detail() {
   return (
     <Box component='section'>
-      <Grid container spacing={0}>
+      <Grid container spacing={0} mb={8}>
         <Grid item md={3} xs={12}>
           <Thumbnail />
         </Grid>

@@ -35,7 +35,10 @@ export default function Thumbnail({}: Props) {
       >
         <CardContent
           sx={{
-            position: 'static',
+            position: 'relative',
+            display: 'block',
+            width: '100%',
+            height: '100%',
           }}
         >
           <Image
