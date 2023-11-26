@@ -1,3 +1,5 @@
+import { APP_CONFIG, APP_ROUTERS } from './config';
+
 interface CustomWindow extends Window {
   FB?: {
     init: (params: {
@@ -12,23 +14,25 @@ interface CustomWindow extends Window {
 }
 declare const window: CustomWindow;
 
-const facebookAppId = process.env.REACT_APP_FACEBOOK_APP_ID || "";
-
+const facebookAppId = process.env.NEXT_PUBLIC_FACEBOOK_APP_ID || '';
+export function getDataHref(slug: string) {
+  return APP_CONFIG.DOMAIN + APP_ROUTERS.MOVIE + slug;
+}
 export function initFacebookSdk() {
-  console.log("first");
+  console.log('first');
   if (window.FB) {
     window.FB.XFBML.parse();
   }
   return new Promise((resolve) => {
     // wait for facebook sdk to initialize before starting the react app
-    const locate = process.env.LANGUAGES || "vi_VN";
+    const locate = process.env.NEXT_PUBLIC_LANGUAGES || 'vi_VN';
     window.fbAsyncInit = function () {
       if (window.FB) {
         window.FB.init({
           appId: facebookAppId,
           cookie: true,
           xfbml: true,
-          version: "v18.0",
+          version: 'v18.0',
         });
       }
     };
@@ -49,13 +53,13 @@ export function initFacebookSdk() {
       js = d.createElement(s);
       js.id = id;
 
-      if ("src" in js) {
+      if ('src' in js) {
         js.src = `https://connect.facebook.net/${locate}/sdk.js`;
       }
 
       if (fjs.parentNode) {
         fjs.parentNode.insertBefore(js, fjs);
       }
-    })(document, "script", "facebook-jssdk");
+    })(document, 'script', 'facebook-jssdk');
   });
 }

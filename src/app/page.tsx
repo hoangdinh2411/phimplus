@@ -8,6 +8,7 @@ import {
   fetchListNewMovie,
   fetchListSeriesMovieByGallery,
   fetchListSingleMovieByGallery,
+  fetchUpcomingMovie,
 } from '~/services/movieApi';
 import AdsSlideSkeleton from '~/components/UI/Skeleton/AdsSlideSkeleton';
 import ListMovieSkeleton from '~/components/UI/Skeleton/ListMovieSkeleton';
@@ -39,17 +40,25 @@ export async function generateMetadata(parent: any): Promise<Metadata> {
   };
 }
 
+async function fetchDifferentTypeOfMoviesForHomePage() {
+  return await Promise.all([
+    fetchListNewMovie(),
+    fetchUpcomingMovie(),
+    fetchListSingleMovieByGallery(),
+    fetchListSeriesMovieByGallery(),
+    fetchListCartoonByGallery(),
+  ]);
+}
+
 export default async function Home() {
-  const newMovies = await fetchListNewMovie();
-  const singleMovie = await fetchListSingleMovieByGallery();
-  const seriesMovie = await fetchListSeriesMovieByGallery();
-  const cartoonMovie = await fetchListCartoonByGallery();
+  const [newMovies, upcomingMovies, singleMovie, seriesMovie, cartoonMovie] =
+    await fetchDifferentTypeOfMoviesForHomePage();
   return (
     <Box>
       <AdsSlide items={newMovies.items} />
       <Container maxWidth='lg' component='section'>
         <MovieSlide
-          items={newMovies?.items}
+          items={upcomingMovies?.items}
           title={GALLERY.upcoming.name}
           href={GALLERY.upcoming.slug}
         />
