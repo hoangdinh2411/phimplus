@@ -1,6 +1,6 @@
 import Container from '@mui/material/Container';
 import React from 'react';
-import { Metadata, ResolvingMetadata } from 'next';
+import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import { GALLERY } from '~/helpers/config';
 import {
@@ -25,9 +25,7 @@ const ListMovie = dynamic(() => import('~/app/_pages/home/ListMovie'), {
   ssr: false,
 });
 
-export async function generateMetadata(
-  parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata(parent: any): Promise<Metadata> {
   const newMovies = await fetchListNewMovie();
   const previousImages = (await parent).openGraph?.images || [];
   return {
