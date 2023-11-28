@@ -18,8 +18,11 @@ export default function Thumbnail({}: Props) {
         sx={{
           overflow: 'hidden',
           margin: '0 auto',
-          width: {
+          minWidth: {
             md: '100%',
+            xs: 300,
+          },
+          maxWidth: {
             xs: 350,
           },
           height: {
@@ -34,6 +37,7 @@ export default function Thumbnail({}: Props) {
         }}
       >
         <CardContent
+          component='figure'
           sx={{
             position: 'relative',
             display: 'block',
@@ -45,6 +49,7 @@ export default function Thumbnail({}: Props) {
             src={movie.item.thumb_url}
             alt={movie.item.name}
             fill
+            objectFit='contain'
             priority={true}
             sizes='100%,100%'
             style={{

@@ -1,7 +1,7 @@
-import { Components } from "@mui/material/styles";
-import { color } from "./palette";
+import { Components } from '@mui/material/styles';
+import { color } from './palette';
 
-const navbarHeight = "100px";
+const navbarHeight = '100px';
 const textFieldHeight = 42;
 const components: Components = {
   //Button
@@ -9,12 +9,12 @@ const components: Components = {
     styleOverrides: {
       root: {
         borderRadius: 500,
-        color: "#ffffff",
-        padding: "10px 30px",
-        textTransform: "lowercase",
-        border: "none",
-        ":hover": {
-          border: "none",
+        color: '#ffffff',
+        padding: '10px 30px',
+        textTransform: 'lowercase',
+        border: 'none',
+        ':hover': {
+          border: 'none',
         },
         height: 36,
       },
@@ -32,14 +32,14 @@ const components: Components = {
 
       sizeLarge: {
         fontSize: 16,
-        fontWeight: "bold",
-        textTransform: "uppercase",
+        fontWeight: 'bold',
+        textTransform: 'uppercase',
         height: 40,
-        transition: "all 0.3s ease-in-out",
+        transition: 'all 0.3s ease-in-out',
 
-        "@media (min-width: 1140px)": {
-          ":hover": {
-            transform: "scale(1.1)",
+        '@media (min-width: 1140px)': {
+          ':hover': {
+            transform: 'scale(1.1)',
           },
         },
       },
@@ -50,13 +50,13 @@ const components: Components = {
   MuiContainer: {
     styleOverrides: {
       root: {
-        maxWidth: "1140px",
-        width: "100%",
+        maxWidth: '1140px',
+        width: '100%',
       },
       maxWidthXl: {
-        maxWidth: "100%",
-        "@media (min-width: 600px)": {
-          maxWidth: "100%",
+        maxWidth: '100%',
+        '@media (min-width: 600px)': {
+          maxWidth: '100%',
         },
       },
     },
@@ -71,9 +71,9 @@ const components: Components = {
   MuiAppBar: {
     styleOverrides: {
       root: ({ theme }: any) => ({
-        boxShadow: "none",
+        boxShadow: 'none',
         height: navbarHeight,
-        borderBottom: "0.5px solid " + theme.palette.divider,
+        borderBottom: '0.5px solid ' + theme.palette.divider,
       }),
     },
   },
@@ -84,7 +84,7 @@ const components: Components = {
   MuiLink: {
     styleOverrides: {
       root: {
-        textDecoration: "none",
+        textDecoration: 'none',
       },
     },
   },
@@ -95,23 +95,29 @@ const components: Components = {
     styleOverrides: {
       root: ({ theme }: any) => ({
         height: textFieldHeight,
-        outline: "none",
-        border: "none",
-        "& fieldset": {
-          border: "0.5px solid " + theme.palette.divider,
+        outline: 'none',
+        border: 'none',
+        '& fieldset': {
+          border: '0.5px solid ' + theme.palette.divider,
         },
       }),
     },
   },
+
   MuiOutlinedInput: {
     styleOverrides: {
       root: {
-        borderRadius: 3,
-        outline: "none",
-        border: "none",
+        overFlow: 'hidden',
+        '&.MuiInputBase-formControl': {
+          outline: 'none',
+          height: textFieldHeight,
+          border: 'none',
+        },
       },
+
       input: ({ theme }: any) => ({
-        padding: "0 16px",
+        padding: '0 16px',
+        borderRadius: 3,
         height: textFieldHeight,
         backgroundColor: theme.palette.background.paper,
       }),
@@ -124,7 +130,7 @@ const components: Components = {
     styleOverrides: {
       root: {
         borderRadius: 2,
-        backgroundColor: "primary.dark",
+        backgroundColor: 'primary.dark',
       },
     },
   },
@@ -134,8 +140,8 @@ const components: Components = {
   MuiPagination: {
     styleOverrides: {
       root: {
-        marginLeft: "16px",
-        ".Mui-selected": {
+        marginLeft: '16px',
+        '.Mui-selected': {
           color: color.white,
           backgroundColor: `${color.red} !important`,
         },
@@ -147,16 +153,16 @@ const components: Components = {
   MuiFormControl: {
     styleOverrides: {
       root: {
-        ".MuiInputBase-root": {
-          height: "53px",
-          border: "0.5px solid",
-          borderRadius: "8px",
-          ".MuiSelect-select": {
-            backgroundColor: "transparent",
-            fontSize: "14px",
+        '.MuiInputBase-root': {
+          height: '53px',
+          border: '0.5px solid',
+          borderRadius: '8px',
+          '.MuiSelect-select': {
+            backgroundColor: 'transparent',
+            fontSize: '14px',
           },
-          ".MuiOutlinedInput-notchedOutline": {
-            display: "none",
+          '.MuiOutlinedInput-notchedOutline': {
+            display: 'none',
           },
         },
       },
@@ -166,7 +172,7 @@ const components: Components = {
   MuiList: {
     styleOverrides: {
       root: {
-        maxHeight: "300px",
+        maxHeight: '300px',
       },
     },
   },

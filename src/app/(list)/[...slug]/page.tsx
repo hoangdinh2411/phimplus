@@ -1,17 +1,17 @@
-import { Metadata, ResolvingMetadata } from "next";
-import dynamic from "next/dynamic";
+import { Metadata, ResolvingMetadata } from 'next';
+import dynamic from 'next/dynamic';
 
-import React from "react";
-import { fetchListMovieByCategories } from "~/services/movieApi";
-import Container from "@mui/material/Container";
-import MuiPagination from "../../_pages/list/Pagination";
-const ListMovie = dynamic(() => import("~/app/_pages/home/ListMovie"), {
+import React from 'react';
+import { fetchListMovieByCategories } from '~/services/movieApi';
+import Container from '@mui/material/Container';
+import MuiPagination from '../../_pages/list/Pagination';
+const ListMovie = dynamic(() => import('~/app/_pages/home/ListMovie'), {
   ssr: false,
 });
-import Filter from "~/app/_pages/list/Filter";
-import { getFilterQueries } from "~/helpers/functions";
-import NotFoundForFilter from "~/app/_pages/list/NotFound";
-import { APP_CONFIG } from "~/helpers/config";
+import Filter from '~/app/_pages/list/Filter';
+import { getFilterQueries } from '~/helpers/functions';
+import NotFoundForFilter from '~/app/_pages/list/NotFound';
+import { APP_CONFIG } from '~/helpers/config';
 
 interface Props {
   params: { slug: string[] };
@@ -22,7 +22,7 @@ export async function generateMetadata(
   { params: { slug }, searchParams }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  if (!slug.includes("danh-sach") || !slug.includes("the-loai"))
+  if (!slug.includes('danh-sach') || !slug.includes('the-loai'))
     return {
       title: APP_CONFIG.NAME,
       description: APP_CONFIG.DESCRIPTION,
@@ -30,7 +30,7 @@ export async function generateMetadata(
 
   let filterQueries = getFilterQueries(searchParams);
   const { data } = await fetchListMovieByCategories(
-    slug.join("/") + filterQueries
+    slug.join('/') + filterQueries
   );
 
   const previousImage = (await parent).openGraph?.images || [];
@@ -50,10 +50,12 @@ export async function generateMetadata(
 }
 
 export default async function Page({ params: { slug }, searchParams }: Props) {
+  if (!slug.includes('danh-sach') || !slug.includes('the-loai')) return null;
+
   let filterQueries = getFilterQueries(searchParams);
 
   const { data } = await fetchListMovieByCategories(
-    slug.join("/") + filterQueries
+    slug.join('/') + filterQueries
   );
 
   if (!data || data?.items.length === 0) {

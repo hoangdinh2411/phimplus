@@ -11,11 +11,12 @@ import useApp from '~/hooks/useApp';
 import { Item } from '~/types/app';
 import { usePathname } from 'next/navigation';
 import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
+import { InitialStateAppContextType } from '~/provider/AppContextProvider';
 type Props = {};
 
 function MenuBar({}: Props) {
   const pathname = usePathname();
-  const appContext = useApp();
+  const appContext: InitialStateAppContextType = useApp();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [subMenu, setSubMenu] = React.useState<Item[]>([]);
 
@@ -89,7 +90,7 @@ function MenuBar({}: Props) {
               }}
               transformOrigin={{
                 vertical: 'top',
-                horizontal: 'right',
+                horizontal: 'center',
               }}
               sx={{
                 top: '10px',

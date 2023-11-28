@@ -56,6 +56,11 @@ function Navbar({}: Props) {
           sx={{
             display: 'flex',
             alignItems: 'center',
+            width: 'auto',
+            position: {
+              xs: 'absolute',
+              sm: 'relative',
+            },
           }}
         >
           <Collapse
@@ -66,6 +71,7 @@ function Navbar({}: Props) {
               flex: 1,
               '.MuiCollapse-wrapper': {
                 '.MuiCollapse-wrapperInner': {
+                  width: '100%',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -80,6 +86,7 @@ function Navbar({}: Props) {
               fullWidth
               variant='outlined'
               sx={{
+                width: '100%',
                 mx: 3,
               }}
               onKeyDown={handleEnterToSearchFilm}

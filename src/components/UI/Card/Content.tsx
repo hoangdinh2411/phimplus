@@ -15,6 +15,7 @@ type Props = {
 export default function Content({ name, view, tagTitle, slug }: Props) {
   return (
     <CardContent
+      component='figcaption'
       sx={{
         top: 0,
         left: 0,
@@ -35,13 +36,26 @@ export default function Content({ name, view, tagTitle, slug }: Props) {
           value={view}
           readOnly
           precision={0.5}
+          size='small'
         />
-        <Tag sx={{ mb: 2 }} title={tagTitle} />
+        <Tag
+          sx={{
+            mb: {
+              xs: 4,
+              lg: 2,
+            },
+          }}
+          title={tagTitle}
+        />
         <Typography
           variant='h5'
           component='h5'
           color='text.secondary'
           fontWeight={500}
+          fontSize={{
+            lg: 24,
+            xs: 16,
+          }}
           sx={{
             overflow: 'hidden',
             textOverflow: 'ellipsis',

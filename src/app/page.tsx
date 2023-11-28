@@ -70,7 +70,7 @@ export default async function Home() {
         sx={{
           py: 10,
           px: {
-            xs: 8,
+            xs: 4,
             lg: 0,
           },
         }}
@@ -78,21 +78,18 @@ export default async function Home() {
         <ListMovie
           limit={8}
           listMovie={singleMovie.items}
-          mb={16}
           title={GALLERY.single.name}
           href={GALLERY.single.slug}
         />
         <ListMovie
           limit={8}
           listMovie={seriesMovie.items}
-          mb={16}
           title={GALLERY.series.name}
           href={GALLERY.series.slug}
         />
         <ListMovie
           limit={8}
           listMovie={cartoonMovie.items}
-          mb={16}
           title={GALLERY.cartoon.name}
           href={GALLERY.cartoon.slug}
         />

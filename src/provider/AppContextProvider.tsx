@@ -1,12 +1,12 @@
-"use client";
-import React from "react";
-import { Item } from "~/types/app";
+'use client';
+import React from 'react';
+import { Item } from '~/types/app';
 
-type InitialStateType = {
+export type InitialStateAppContextType = {
   categories: Item[];
   countries: Item[];
 };
-const initialState: InitialStateType = {
+const initialState: InitialStateAppContextType = {
   categories: [],
   countries: [],
 };
