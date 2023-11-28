@@ -50,8 +50,6 @@ export async function generateMetadata(
 }
 
 export default async function Page({ params: { slug }, searchParams }: Props) {
-  if (!slug.includes('danh-sach') || !slug.includes('the-loai')) return null;
-
   let filterQueries = getFilterQueries(searchParams);
 
   const { data } = await fetchListMovieByCategories(
