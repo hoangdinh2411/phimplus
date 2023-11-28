@@ -132,6 +132,7 @@ export default function Filter({ slug, searchParams }: Props) {
         p: 8,
         mt: 8,
         borderRadius: '8px !important',
+        backgroundColor: 'background.default',
       }}
     >
       {isShowAccordion ? (
