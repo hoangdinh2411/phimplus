@@ -1,84 +1,94 @@
-"use client";
-import React from "react";
+'use client';
+import React from 'react';
 
-import Container from "@mui/material/Container";
-import MenuBar from "./MenuBar";
-import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
-import ClickAwayListener from "@mui/material/ClickAwayListener";
-import Collapse from "@mui/material/Collapse";
-import { useRouter } from "next/navigation";
+import Container from '@mui/material/Container';
+import MenuBar from './MenuBar';
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import ClickAwayListener from '@mui/material/ClickAwayListener';
+import Collapse from '@mui/material/Collapse';
+import { useRouter } from 'next/navigation';
 type Props = {};
 function Navbar({}: Props) {
   const router = useRouter();
   const [searchBar, setSearchBar] = React.useState<boolean>(false);
   const searchBarRef = React.useRef<HTMLInputElement>(null);
-  function toggleSearchBar() {
-    setSearchBar((prev) => !prev);
-  }
+
   function closeSearchBar() {
     setSearchBar(false);
-    searchBarRef.current!.value = "";
+    searchBarRef.current!.value = '';
   }
 
-  function searchFilm(e: React.KeyboardEvent<HTMLInputElement>) {
-    if (e.key !== "Enter") return;
-    if (!searchBarRef.current) return;
+  function search() {
     const value = searchBarRef.current?.value;
     router.push(`/search?keyword=${value}`);
-    searchBarRef.current!.value = "";
   }
+  function handleClickOnSearchIcon() {
+    if (searchBar && searchBarRef?.current?.value) {
+      if (!searchBarRef.current) return;
+      search();
+      return;
+    }
+    setSearchBar(true);
+  }
+
+  function handleEnterToSearchFilm(e: React.KeyboardEvent<HTMLInputElement>) {
+    if (e.key !== 'Enter') return;
+    if (!searchBarRef.current) return;
+    search();
+  }
+
   return (
     <Container
       sx={{
         flex: 1,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "right",
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'right',
       }}
     >
       <MenuBar />
 
       <ClickAwayListener onClickAway={closeSearchBar}>
         <Box
-          component="aside"
+          component='aside'
           sx={{
-            display: "flex",
-            alignItems: "center",
+            display: 'flex',
+            alignItems: 'center',
           }}
         >
           <Collapse
-            orientation="horizontal"
+            orientation='horizontal'
             in={searchBar}
             timeout={200}
             sx={{
               flex: 1,
-              ".MuiCollapse-wrapper": {
-                ".MuiCollapse-wrapperInner": {
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
+              '.MuiCollapse-wrapper': {
+                '.MuiCollapse-wrapperInner': {
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
                 },
               },
             }}
           >
             <TextField
               inputRef={searchBarRef}
-              id="search"
-              placeholder="Search"
+              id='search'
+              placeholder='Search'
               fullWidth
-              variant="outlined"
+              variant='outlined'
               sx={{
                 mx: 3,
               }}
-              onKeyDown={searchFilm}
+              onKeyDown={handleEnterToSearchFilm}
             />
           </Collapse>
           <SearchOutlinedIcon
-            onClick={toggleSearchBar}
+            onClick={handleClickOnSearchIcon}
             sx={{
-              cursor: "pointer",
+              cursor: 'pointer',
             }}
           />
         </Box>
