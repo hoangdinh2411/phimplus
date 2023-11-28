@@ -106,14 +106,14 @@ const components: Components = {
 
   MuiOutlinedInput: {
     styleOverrides: {
-      root: {
+      root: ({ theme }: any) => ({
         overFlow: 'hidden',
         '&.MuiInputBase-formControl': {
           outline: 'none',
           height: textFieldHeight,
           border: 'none',
         },
-      },
+      }),
 
       input: ({ theme }: any) => ({
         padding: '0 16px',
@@ -123,7 +123,15 @@ const components: Components = {
       }),
     },
   },
-
+  MuiSelect: {
+    styleOverrides: {
+      root: ({ theme }: any) => ({
+        '&.MuiInputBase-root': {
+          height: textFieldHeight,
+        },
+      }),
+    },
+  },
   //Paper
 
   MuiPaper: {
