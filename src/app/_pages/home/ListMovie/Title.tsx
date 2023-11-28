@@ -13,7 +13,7 @@ interface Props {
 }
 export default function Title({ title, seeMore, href = '' }: Props) {
   return (
-    <Box my={8} component='div'>
+    <Box my={8} component='article'>
       <Grid
         container
         spacing={0}

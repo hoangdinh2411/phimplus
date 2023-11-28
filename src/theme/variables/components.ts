@@ -168,6 +168,14 @@ const components: Components = {
       },
     },
   },
+  //mui list
+  MuiList: {
+    styleOverrides: {
+      root: {
+        maxHeight: '300px',
+      },
+    },
+  },
 };
 
 export default components;

@@ -86,7 +86,7 @@ export default function Content({ item }: Props) {
         </Link>
       </Box>
       <Box
-        component='figure'
+        component='figcaption'
         position='absolute'
         bottom='10%'
         left='5%'

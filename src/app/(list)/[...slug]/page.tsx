@@ -50,7 +50,7 @@ export async function generateMetadata(
 }
 
 export default async function Page({ params: { slug }, searchParams }: Props) {
-  console.log('slug', slug);
+  if (!slug.includes('danh-sach') || !slug.includes('the-loai')) return null;
 
   let filterQueries = getFilterQueries(searchParams);
 
@@ -75,6 +75,7 @@ export default async function Page({ params: { slug }, searchParams }: Props) {
       <Filter slug={slug} searchParams={searchParams} />
       <ListMovie listMovie={data.items} seeMore={false} />
       <MuiPagination
+        filterQueries={filterQueries}
         totalItem={data.params?.pagination.totalItems}
         totalItemPerPage={data.params?.pagination.totalItemsPerPage}
         page={Number(searchParams.page) || 1}

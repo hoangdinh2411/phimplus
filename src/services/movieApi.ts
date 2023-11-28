@@ -71,3 +71,9 @@ export const fetchUpcomingMovie = async () => {
   );
   return res.data;
 };
+
+export const fetchSearchMovie = async (keyword: string) => {
+  return await request<IListMovieWithSeo>(
+    `/v1/api/tim-kiem?keyword=${keyword}`
+  );
+};

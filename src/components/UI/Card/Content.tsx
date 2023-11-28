@@ -15,6 +15,7 @@ type Props = {
 export default function Content({ name, view, tagTitle, slug }: Props) {
   return (
     <CardContent
+      component='figcaption'
       sx={{
         top: 0,
         left: 0,
