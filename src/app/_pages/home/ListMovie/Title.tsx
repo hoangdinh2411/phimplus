@@ -13,7 +13,7 @@ interface Props {
 }
 export default function Title({ title, seeMore, href = '' }: Props) {
   return (
-    <Box my={8} component='div'>
+    <Box my={8} component='article'>
       <Grid
         container
         spacing={0}
@@ -23,7 +23,10 @@ export default function Title({ title, seeMore, href = '' }: Props) {
         <Grid item sm={10} xs={8}>
           <Typography
             variant='h2'
-            fontSize='20px'
+            fontSize={{
+              xs: 16,
+              lg: 20,
+            }}
             fontWeight={500}
             lineHeight='32px'
             noWrap
@@ -35,7 +38,9 @@ export default function Title({ title, seeMore, href = '' }: Props) {
               },
             }}
           >
-            {seeMore && <PlayArrowIcon sx={{ color: color.red, mr: 4 }} />}
+            {seeMore && (
+              <PlayArrowIcon sx={{ color: color.red, mr: 4, ml: -2 }} />
+            )}
             {title}
           </Typography>
         </Grid>

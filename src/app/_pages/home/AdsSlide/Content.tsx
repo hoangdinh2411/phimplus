@@ -44,7 +44,7 @@ export default function Content({ item }: Props) {
     >
       <Skeleton showSkeleton={showSkeleton} />
       <Box
-        component='div'
+        component='figure'
         sx={{
           position: 'absolute',
           top: 0,
@@ -74,6 +74,7 @@ export default function Content({ item }: Props) {
             priority
             sizes='100% 100%'
             style={{
+              objectFit: 'contain',
               top: 0,
               left: 0,
               position: 'absolute',
@@ -85,7 +86,7 @@ export default function Content({ item }: Props) {
         </Link>
       </Box>
       <Box
-        component='div'
+        component='figcaption'
         position='absolute'
         bottom='10%'
         left='5%'
@@ -113,11 +114,10 @@ export default function Content({ item }: Props) {
             sx={{
               whiteSpace: 'nowrap',
               maxWidth: '100%',
-              '@media (min-width: 0)': {
-                fontSize: 30,
-              },
-              '@media (min-width: 992px)': {
-                fontSize: 60,
+              fontSize: {
+                xs: 24,
+                md: 30,
+                lg: 60,
               },
             }}
           >
@@ -128,7 +128,7 @@ export default function Content({ item }: Props) {
             variant='subtitle2'
             component='p'
             fontWeight={600}
-            fontSize={24}
+            fontSize={20}
           >
             -{origin_name}-
           </Typography>
@@ -150,7 +150,7 @@ export default function Content({ item }: Props) {
               {year}
             </Typography>
             <Typography
-              variant='body1'
+              variant='subtitle2'
               component='span'
               px={4}
               sx={{ color: 'primary.dark' }}
@@ -158,14 +158,15 @@ export default function Content({ item }: Props) {
               {quality}
             </Typography>
             <Typography
-              variant='body1'
+              variant='subtitle2'
               component='span'
               px={4}
               sx={{ borderLeft: '1px solid', borderRight: '1px solid' }}
             >
               {time}
             </Typography>
-            <Typography variant='body1' component='span' px={4}>
+
+            <Typography variant='subtitle2' component='span' px={4}>
               {lang}
             </Typography>
           </Box>
@@ -186,21 +187,21 @@ export default function Content({ item }: Props) {
                 display: 'flex',
                 alignItems: 'center',
               }}
+              fontSize={20}
             >
               <StarOutlinedIcon
                 sx={{ color: color.yellow }}
                 fontSize='medium'
               />
-              <Typography
-                variant='body1'
-                component='span'
-                color='primary'
-                fontSize={20}
-              >
-                5
-              </Typography>
+              5
             </Typography>
-            <Typography variant='subtitle2' px={2} component='span'>
+
+            <Typography
+              variant='subtitle2'
+              px={2}
+              component='span'
+              fontSize={16}
+            >
               -
             </Typography>
             <Typography variant='subtitle2' component='span'>

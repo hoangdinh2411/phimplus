@@ -36,8 +36,8 @@ export default function Info() {
           xs: 0,
           md: 20,
         },
-        width: {
-          xs: 400,
+        minWidth: {
+          xs: 300,
           md: '100%',
         },
         height: {

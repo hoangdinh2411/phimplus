@@ -8,27 +8,37 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
 import Collapse from '@mui/material/Collapse';
+import { useRouter } from 'next/navigation';
 type Props = {};
 function Navbar({}: Props) {
+  const router = useRouter();
   const [searchBar, setSearchBar] = React.useState<boolean>(false);
   const searchBarRef = React.useRef<HTMLInputElement>(null);
-  function toggleSearchBar() {
-    setSearchBar((prev) => !prev);
-  }
+
   function closeSearchBar() {
     setSearchBar(false);
     searchBarRef.current!.value = '';
   }
 
-  function searchFilm(e: React.KeyboardEvent<HTMLInputElement>) {
+  function search() {
+    const value = searchBarRef.current?.value;
+    router.push(`/search?keyword=${value}`);
+  }
+  function handleClickOnSearchIcon() {
+    if (searchBar && searchBarRef?.current?.value) {
+      if (!searchBarRef.current) return;
+      search();
+      return;
+    }
+    setSearchBar(true);
+  }
+
+  function handleEnterToSearchFilm(e: React.KeyboardEvent<HTMLInputElement>) {
     if (e.key !== 'Enter') return;
     if (!searchBarRef.current) return;
-    const value = searchBarRef.current?.value;
-
-    console.log(value);
-
-    searchBarRef.current!.value = '';
+    search();
   }
+
   return (
     <Container
       sx={{
@@ -46,6 +56,11 @@ function Navbar({}: Props) {
           sx={{
             display: 'flex',
             alignItems: 'center',
+            width: 'auto',
+            position: {
+              xs: 'absolute',
+              sm: 'relative',
+            },
           }}
         >
           <Collapse
@@ -56,6 +71,7 @@ function Navbar({}: Props) {
               flex: 1,
               '.MuiCollapse-wrapper': {
                 '.MuiCollapse-wrapperInner': {
+                  width: '100%',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -70,13 +86,14 @@ function Navbar({}: Props) {
               fullWidth
               variant='outlined'
               sx={{
+                width: '100%',
                 mx: 3,
               }}
-              onKeyDown={searchFilm}
+              onKeyDown={handleEnterToSearchFilm}
             />
           </Collapse>
           <SearchOutlinedIcon
-            onClick={toggleSearchBar}
+            onClick={handleClickOnSearchIcon}
             sx={{
               cursor: 'pointer',
             }}

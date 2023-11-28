@@ -11,7 +11,7 @@ export default function AboutMovie() {
       <Typography variant='h5' component='h5' pb={8}>
         Nội dung phim
       </Typography>
-      <p dangerouslySetInnerHTML={{ __html: movie.item.content }} />
+      <blockquote dangerouslySetInnerHTML={{ __html: movie.item.content }} />
     </Box>
   );
 }

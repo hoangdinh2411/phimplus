@@ -29,7 +29,13 @@ export default function Tag(props: TagProps) {
       <Typography
         variant='caption'
         component='span'
-        minWidth={20}
+        minWidth={16}
+        sx={{
+          transform: {
+            lg: 'scale(1)',
+            xs: 'scale(0.8)',
+          },
+        }}
         textAlign='center'
       >
         {title}

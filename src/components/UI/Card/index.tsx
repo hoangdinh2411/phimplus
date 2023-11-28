@@ -29,7 +29,10 @@ export default function Cart({ slug, thumbnail, name, view, tagTitle }: Props) {
       sx={{
         position: 'relative',
         width: '100%',
-        height: 396,
+        height: {
+          md: 400,
+          xs: 350,
+        },
         borderRadius: {
           lg: 6,
           xs: 2,
@@ -55,6 +58,7 @@ export default function Cart({ slug, thumbnail, name, view, tagTitle }: Props) {
       />
 
       <CardContent
+        component='figure'
         sx={{
           height: '100%',
           position: 'relative',
@@ -94,6 +98,7 @@ export default function Cart({ slug, thumbnail, name, view, tagTitle }: Props) {
             priority
             sizes='100% 100%'
             style={{
+              objectFit: 'cover',
               top: 0,
               left: 0,
               position: 'absolute',

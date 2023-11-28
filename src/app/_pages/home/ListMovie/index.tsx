@@ -21,9 +21,16 @@ export default function ListMovie({
   ...rest
 }: Props) {
   return (
-    <Box mb={16} {...rest} component='section'>
+    <Box
+      mb={{
+        xs: 16,
+        lg: 20,
+      }}
+      {...rest}
+      component='section'
+    >
       <Title seeMore={seeMore} title={title} href={href} />
-      <Grid spacing={8} container my={8} ml={-8}>
+      <Grid spacing={8} container my={4} ml={-8}>
         {listMovie &&
           listMovie.map((item, index) => {
             if (limit && index >= limit) return null;

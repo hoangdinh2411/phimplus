@@ -29,18 +29,30 @@ export default function MovieSlide({
         disableGutters
         sx={{
           py: 20,
+          px: {
+            xs: 4,
+            lg: 0,
+          },
           '.swiper-button-next , .swiper-button-prev': {
             ':hover': {
               backgroundColor: 'background.paper',
-              width: '50px',
-              height: '50px',
+              width: {
+                xs: 32,
+                md: 50,
+              },
+              height: {
+                xs: 32,
+                md: 50,
+              },
               borderRadius: '50%',
               transition: 'all 0.2s',
             },
             ':after': {
               color: 'text.primary',
-              lineHeight: '50px',
-              fontSize: '25px',
+              fontSize: {
+                xs: 16,
+                md: 24,
+              },
             },
           },
         }}
@@ -48,18 +60,19 @@ export default function MovieSlide({
         <Swiper
           // install Swiper modules
           modules={[Navigation]}
-          spaceBetween={20}
           slidesPerView={2}
           navigation
           breakpoints={{
             0: {
               slidesPerView: 2,
+              spaceBetween: 8,
             },
             600: {
               slidesPerView: 3,
             },
             800: {
               slidesPerView: 4,
+              spaceBetween: 16,
             },
           }}
         >

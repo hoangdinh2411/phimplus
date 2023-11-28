@@ -63,7 +63,7 @@ export default function TopList({ items }: Props) {
                 alignItems: 'center',
               }}
             >
-              <Box component='aside' width={46} height={46} mr={8}>
+              <Box width={46} height={46} mr={8} component='figure'>
                 <Image
                   alt={item.name}
                   src={item.thumb_url}

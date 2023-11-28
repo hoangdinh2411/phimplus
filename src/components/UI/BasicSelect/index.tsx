@@ -1,11 +1,11 @@
-"use client";
-import * as React from "react";
-import Box from "@mui/material/Box";
+'use client';
+import * as React from 'react';
+import Box from '@mui/material/Box';
 // import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import { Item } from "~/types/app";
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import { Item } from '~/types/app';
 
 interface Props {
   value: string | number;
@@ -31,7 +31,7 @@ export default function BasicSelect({
           onChange={(event) => {
             handleChange(event as React.ChangeEvent<HTMLInputElement>);
           }}
-          size="medium"
+          size='medium'
           name={name}
         >
           {data.map((item, index) => {
