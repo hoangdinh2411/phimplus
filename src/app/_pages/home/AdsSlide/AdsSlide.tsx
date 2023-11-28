@@ -20,7 +20,7 @@ export default function AdsSlide({ items }: Props) {
         sx={{
           height: {
             xs: 450,
-            lg: 850,
+            lg: 650,
           },
           mb: 30,
           overflow: 'hidden',
@@ -47,6 +47,7 @@ export default function AdsSlide({ items }: Props) {
           modules={[Pagination, Autoplay]}
           centeredSlides={true}
           slidesPerView={1}
+          loop={true}
           pagination={{ clickable: true }}
           autoplay={{
             delay: 10000,

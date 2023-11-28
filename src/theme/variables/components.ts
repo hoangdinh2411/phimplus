@@ -103,15 +103,21 @@ const components: Components = {
       }),
     },
   },
+
   MuiOutlinedInput: {
     styleOverrides: {
       root: {
-        borderRadius: 3,
-        outline: 'none',
-        border: 'none',
+        overFlow: 'hidden',
+        '&.MuiInputBase-formControl': {
+          outline: 'none',
+          height: textFieldHeight,
+          border: 'none',
+        },
       },
+
       input: ({ theme }: any) => ({
         padding: '0 16px',
+        borderRadius: 3,
         height: textFieldHeight,
         backgroundColor: theme.palette.background.paper,
       }),

@@ -17,6 +17,7 @@ const theme = createTheme({
   shape: {
     borderRadius: 2,
   },
+
   components,
   breakpoints: {
     values: {

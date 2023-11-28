@@ -50,6 +50,8 @@ export async function generateMetadata(
 }
 
 export default async function Page({ params: { slug }, searchParams }: Props) {
+  console.log('slug', slug);
+
   let filterQueries = getFilterQueries(searchParams);
 
   const { data } = await fetchListMovieByCategories(

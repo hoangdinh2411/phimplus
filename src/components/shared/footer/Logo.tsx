@@ -4,7 +4,7 @@ import React from 'react';
 import Typography from '@mui/material/Typography';
 import Brand from '../header/Brand';
 import NextLink from 'next/link';
-import { APP_ROUTERS } from '~/helpers/config';
+import { APP_CONFIG, APP_ROUTERS } from '~/helpers/config';
 
 export default function Logo() {
   return (
@@ -36,7 +36,7 @@ export default function Logo() {
             color='primary.dark'
             component={NextLink}
           >
-            PhimPlus{' '}
+            {APP_CONFIG.NAME}
           </Link>
           - Trang xem phim Online với giao diện mới được bố trí và thiết kế thân
           thiện với người dùng. Nguồn phim được tổng hợp từ các website lớn với
