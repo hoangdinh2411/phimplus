@@ -28,6 +28,11 @@ export default function BasicSelect({
           labelId={`${name}-label`}
           id={name}
           value={value}
+          sx={{
+            '&.MuiInputBase-formControl': {
+              border: '0.5px solid ',
+            },
+          }}
           onChange={(event) => {
             handleChange(event as React.ChangeEvent<HTMLInputElement>);
           }}
