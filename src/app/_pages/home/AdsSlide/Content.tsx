@@ -71,7 +71,7 @@ export default function Content({ item }: Props) {
             src={item.poster_url}
             alt={item.name}
             fill={true}
-            priority
+            priority={true}
             sizes='100% 100%'
             style={{
               objectFit: 'contain',
