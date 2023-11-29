@@ -49,8 +49,8 @@ export default function Thumbnail({}: Props) {
             src={movie.item.thumb_url}
             alt={movie.item.name}
             fill
+            loading='eager'
             objectFit='contain'
-            priority={true}
             sizes='100%,100%'
             style={{
               position: 'absolute',

@@ -1,6 +1,6 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
-import Cart from '~/components/UI/Card';
+import MovieCard from '~/components/UI/MovieCard';
 import { IMovieDetail } from '~/types/movie';
 import { BoxProps } from '@mui/material';
 import Box from '@mui/material/Box';
@@ -36,7 +36,7 @@ export default function ListMovie({
             if (limit && index >= limit) return null;
             return (
               <Grid key={index} item md={3} sm={4} xs={6}>
-                <Cart
+                <MovieCard
                   name={item.name}
                   slug={item.slug}
                   thumbnail={item.thumb_url}

@@ -5,7 +5,7 @@ import { Navigation } from 'swiper/modules';
 import Container from '@mui/material/Container';
 import { IMovieDetail } from '~/types/movie';
 import Title from '~/app/_pages/home/ListMovie/Title';
-import Cart from '~/components/UI/Card';
+import MovieCard from '~/components/UI/MovieCard';
 
 interface Props {
   items: IMovieDetail[];
@@ -79,7 +79,7 @@ export default function MovieSlide({
           {items?.map((item) => {
             return (
               <SwiperSlide key={item._id}>
-                <Cart
+                <MovieCard
                   name={item.name}
                   slug={item.slug}
                   thumbnail={item.thumb_url}

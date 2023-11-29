@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Image from 'next/image';
@@ -15,8 +15,14 @@ type Props = {
   tagTitle: string;
 };
 
-export default function Cart({ slug, thumbnail, name, view, tagTitle }: Props) {
-  const [showSkeleton, setShowSkeleton] = React.useState<boolean>(true);
+export default function MovieCard({
+  slug,
+  thumbnail,
+  name,
+  view,
+  tagTitle,
+}: Props) {
+  const [showSkeleton, setShowSkeleton] = useState<boolean>(true);
 
   if (!view || view < 0) view = 3;
   if (view && view > 5) view = 5;
@@ -95,7 +101,7 @@ export default function Cart({ slug, thumbnail, name, view, tagTitle }: Props) {
             src={thumbnail}
             alt={name}
             fill
-            priority
+            loading='eager'
             sizes='100% 100%'
             style={{
               objectFit: 'cover',
