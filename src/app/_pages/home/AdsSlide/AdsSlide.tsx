@@ -1,11 +1,11 @@
-'use client';
-import React from 'react';
-import Container from '@mui/material/Container';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
+"use client";
+import React from "react";
+import Container from "@mui/material/Container";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
 
-import { IMovieDetail } from '~/types/movie';
-import Content from './Content';
+import { IMovieDetail } from "~/types/movie";
+import Content from "./Content";
 
 interface Props {
   items: IMovieDetail[];
@@ -14,31 +14,33 @@ export default function AdsSlide({ items }: Props) {
   return (
     <React.Fragment>
       <Container
-        component='article'
-        maxWidth='xl'
+        component="article"
+        maxWidth="xl"
         disableGutters
         sx={{
           height: {
-            xs: 450,
+            xs: 350,
+            sm: 450,
+            md: 550,
             lg: 650,
           },
           mb: 30,
-          overflow: 'hidden',
-          '.swiper-pagination-bullet': {
+          overflow: "hidden",
+          ".swiper-pagination-bullet": {
             display: {
-              xs: 'none',
-              md: 'inline-block',
+              xs: "none",
+              md: "inline-block",
             },
-            width: '20px',
-            height: '4px',
-            borderRadius: '5px',
-            backgroundColor: '#fff',
+            width: "20px",
+            height: "4px",
+            borderRadius: "5px",
+            backgroundColor: "#fff",
           },
-          '.swiper-pagination-bullet-active': {
-            width: '40px',
+          ".swiper-pagination-bullet-active": {
+            width: "40px",
             display: {
-              xs: 'none',
-              md: 'inline-block',
+              xs: "none",
+              md: "inline-block",
             },
           },
         }}
@@ -54,7 +56,7 @@ export default function AdsSlide({ items }: Props) {
             disableOnInteraction: false,
           }}
           style={{
-            height: '100%',
+            height: "100%",
           }}
         >
           {items &&
@@ -63,8 +65,8 @@ export default function AdsSlide({ items }: Props) {
                 <SwiperSlide
                   key={index}
                   style={{
-                    height: '100%',
-                    width: '100%',
+                    height: "100%",
+                    width: "100%",
                   }}
                 >
                   <Content item={item} />

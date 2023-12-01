@@ -8,6 +8,8 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import Button from '@mui/material/Button';
 import useMovie from '~/hooks/useMovie';
 import Tag from '~/components/UI/Tag';
+import Link from 'next/link';
+import { APP_ROUTERS } from '~/helpers/config';
 type Props = {};
 
 export default function Thumbnail({}: Props) {
@@ -50,7 +52,7 @@ export default function Thumbnail({}: Props) {
             alt={movie.item.name}
             fill
             loading='eager'
-            objectFit='contain'
+            objectFit='cover'
             sizes='100%,100%'
             style={{
               position: 'absolute',
@@ -77,16 +79,22 @@ export default function Thumbnail({}: Props) {
           },
         }}
       >
-        <Button
-          variant='contained'
-          size='large'
-          sx={{
-            margin: '40px auto 0',
-          }}
+        <Link
+          href={APP_ROUTERS.WATCH + movie.item.slug}
+          prefetch={false}
+          style={{ margin: '0px auto' }}
         >
-          <PlayArrowIcon />
-          Xem phim{' '}
-        </Button>
+          <Button
+            variant='contained'
+            size='large'
+            sx={{
+              margin: '40px auto 0',
+            }}
+          >
+            <PlayArrowIcon />
+            Xem phim{' '}
+          </Button>
+        </Link>
       </Box>
     </>
   );
