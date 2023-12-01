@@ -1,13 +1,13 @@
-import List from '@mui/material/List';
-import ListItemButton from '@mui/material/ListItemButton';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+import List from "@mui/material/List";
+import ListItemButton from "@mui/material/ListItemButton";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { IMovieDetail } from '~/types/movie';
-import { APP_ROUTERS } from '~/helpers/config';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { IMovieDetail } from "~/types/movie";
+import { APP_ROUTERS } from "~/helpers/config";
 
 type Props = {
   items: IMovieDetail[];
@@ -16,22 +16,23 @@ export default function TopList({ items }: Props) {
   return (
     <Box
       sx={{
-        position: 'sticky',
+        position: "sticky",
         top: 16,
       }}
-      bgcolor={'background.paper'}
+      bgcolor={"background.paper"}
       borderRadius={2}
-      color={'text.primary'}
+      color={"text.primary"}
     >
       <List
-        component='nav'
+        component="nav"
         sx={{
+          maxHeight: "max-content",
           borderRadius: 2,
-          overflowY: 'auto',
-          '::-webkit-scrollbar': {
-            display: 'none',
+          overflowY: "auto",
+          "::-webkit-scrollbar": {
+            display: "none",
           },
-          position: 'static',
+          position: "static",
           top: 0,
         }}
       >
@@ -40,11 +41,11 @@ export default function TopList({ items }: Props) {
           mb={4}
           px={8}
           sx={{
-            borderBottom: '1px solid ',
-            borderColor: 'divider',
+            borderBottom: "1px solid ",
+            borderColor: "divider",
           }}
         >
-          <Typography variant='body1' component='p' fontWeight='bolder'>
+          <Typography variant="body1" component="p" fontWeight="bolder">
             Top phim
           </Typography>
         </Box>
@@ -53,28 +54,28 @@ export default function TopList({ items }: Props) {
             key={item._id}
             href={`${APP_ROUTERS.MOVIE}/${item.slug}`}
             style={{
-              color: 'inherit',
+              color: "inherit",
             }}
           >
             <ListItemButton
               sx={{
                 mb: 2,
-                display: 'flex',
-                alignItems: 'center',
+                display: "flex",
+                alignItems: "center",
               }}
             >
-              <Box width={46} height={46} mr={8} component='figure'>
+              <Box width={46} height={46} mr={8} component="figure">
                 <Image
                   alt={item.name}
                   src={item.thumb_url}
                   width={46}
                   height={46}
                   style={{
-                    objectFit: 'cover',
+                    objectFit: "cover",
                   }}
                 />
               </Box>
-              <Typography variant='caption' fontWeight={500} component='span'>
+              <Typography variant="caption" fontWeight={500} component="span">
                 {item.name}
               </Typography>
             </ListItemButton>

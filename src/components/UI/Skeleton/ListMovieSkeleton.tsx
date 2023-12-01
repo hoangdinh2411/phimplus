@@ -12,10 +12,15 @@ export default function ListMovieSkeleton() {
             <Grid key={index} item md={3} sm={4} xs={6}>
               <Skeleton
                 variant="rounded"
-                width={235}
                 height={356}
                 animation="wave"
-                sx={{ borderRadius: "20px" }}
+                sx={{
+                  borderRadius: "20px",
+                  width: {
+                    xs: 179,
+                    md: 235,
+                  },
+                }}
               />
             </Grid>
           );

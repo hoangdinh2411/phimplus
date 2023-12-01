@@ -1,24 +1,24 @@
-'use client';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+"use client";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 // import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
 // import ThumbDownOutlinedIcon from "@mui/icons-material/ThumbDownOutlined";
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import Button from '@mui/material/Button';
-import useMovie from '~/hooks/useMovie';
-import { APP_ROUTERS } from '~/helpers/config';
-import React from 'react';
-import Link from 'next/link';
-import LikeAndSharePlugin from '~/components/shared/likeAndSharePlugin.tsx';
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import Button from "@mui/material/Button";
+import useMovie from "~/hooks/useMovie";
+import { APP_ROUTERS } from "~/helpers/config";
+import React from "react";
+import Link from "next/link";
+import LikeAndSharePlugin from "~/components/shared/likeAndSharePlugin.tsx";
 export default function Info() {
   const { movie } = useMovie();
 
   const getMovieStatus = React.useCallback(() => {
     switch (movie.item.episode_current) {
-      case 'Full':
-        return 'Full';
-      case 'Trailer':
-        return 'Trailer';
+      case "Full":
+        return "Full";
+      case "Trailer":
+        return "Trailer";
 
       default:
         return movie.item.episode_current;
@@ -26,7 +26,7 @@ export default function Info() {
   }, [movie.item.episode_current]);
   return (
     <Box
-      component='aside'
+      component="aside"
       sx={{
         my: {
           md: 0,
@@ -38,35 +38,35 @@ export default function Info() {
         },
         minWidth: {
           xs: 300,
-          md: '100%',
+          md: "100%",
         },
         height: {
           lg: 450,
-          xs: '100%',
+          xs: "100%",
         },
-        marginX: 'auto',
-        display: 'flex',
-        flexDirection: 'column',
+        marginX: "auto",
+        display: "flex",
+        flexDirection: "column",
       }}
     >
-      <Typography pb={12} variant='h4' component='h4' fontWeight='600'>
+      <Typography pb={12} variant="h4" component="h4" fontWeight="600">
         {movie.item.name}
       </Typography>
 
       <Typography
         pb={8}
-        variant='h6'
-        component='p'
+        variant="h6"
+        component="p"
         sx={{
-          display: 'flex',
-          alignItems: 'center',
+          display: "flex",
+          alignItems: "center",
         }}
       >
         Tên gốc:
         <Typography
-          variant='caption'
-          component='span'
-          color='primary.dark'
+          variant="caption"
+          component="span"
+          color="primary.dark"
           ml={4}
         >
           {movie.item.origin_name}
@@ -74,18 +74,18 @@ export default function Info() {
       </Typography>
       <Typography
         pb={8}
-        variant='h6'
-        component='p'
+        variant="h6"
+        component="p"
         sx={{
-          display: 'flex',
-          alignItems: 'center',
+          display: "flex",
+          alignItems: "center",
         }}
       >
         Số tập:
         <Typography
-          variant='caption'
-          component='span'
-          color='primary.dark'
+          variant="caption"
+          component="span"
+          color="primary.dark"
           ml={4}
         >
           {movie.item.episode_total}
@@ -93,18 +93,18 @@ export default function Info() {
       </Typography>
       <Typography
         pb={8}
-        variant='h6'
-        component='p'
+        variant="h6"
+        component="p"
         sx={{
-          display: 'flex',
-          alignItems: 'center',
+          display: "flex",
+          alignItems: "center",
         }}
       >
         Mới nhất:
         <Typography
-          variant='caption'
-          component='span'
-          color='primary.dark'
+          variant="caption"
+          component="span"
+          color="primary.dark"
           ml={4}
         >
           {getMovieStatus()}
@@ -112,18 +112,18 @@ export default function Info() {
       </Typography>
       <Typography
         pb={8}
-        variant='h6'
-        component='p'
+        variant="h6"
+        component="p"
         sx={{
-          display: 'flex',
-          alignItems: 'center',
+          display: "flex",
+          alignItems: "center",
         }}
       >
         Năm sản xuất:
         <Typography
-          variant='caption'
-          component='span'
-          color='primary.dark'
+          variant="caption"
+          component="span"
+          color="primary.dark"
           ml={4}
         >
           {movie.item.year}
@@ -131,11 +131,11 @@ export default function Info() {
       </Typography>
       <Typography
         pb={8}
-        variant='h6'
-        component='p'
+        variant="h6"
+        component="p"
         sx={{
-          display: 'flex',
-          alignItems: 'center',
+          display: "flex",
+          alignItems: "center",
         }}
       >
         Thể loại:
@@ -147,13 +147,13 @@ export default function Info() {
               prefetch={false}
             >
               <Typography
-                variant='caption'
-                component='span'
+                variant="caption"
+                component="span"
                 ml={4}
-                color='primary.dark'
+                color="primary.dark"
                 sx={{
-                  '&:hover': {
-                    textDecoration: 'underline',
+                  "&:hover": {
+                    textDecoration: "underline",
                   },
                 }}
               >
@@ -165,21 +165,21 @@ export default function Info() {
       </Typography>
       <Typography
         pb={8}
-        variant='h6'
-        component='p'
+        variant="h6"
+        component="p"
         sx={{
-          display: 'flex',
-          alignItems: 'center',
+          display: "flex",
+          alignItems: "center",
         }}
       >
         Đạo diễn:
         <Typography
-          variant='caption'
-          component='span'
-          color='primary.dark'
+          variant="caption"
+          component="span"
+          color="primary.dark"
           ml={4}
         >
-          {movie.item.director.join('- ')}
+          {movie.item.director.join("- ")}
         </Typography>
       </Typography>
 
@@ -223,15 +223,15 @@ export default function Info() {
         mt={8}
         sx={{
           display: {
-            md: 'flex',
-            xs: 'none',
+            md: "flex",
+            xs: "none",
           },
         }}
       >
         <Link href={APP_ROUTERS.WATCH + movie.item.slug} prefetch={false}>
-          <Button variant='contained' size='large'>
+          <Button variant="contained" size="large">
             <PlayArrowIcon />
-            Xem phim{' '}
+            Xem phim{" "}
           </Button>
         </Link>
       </Box>

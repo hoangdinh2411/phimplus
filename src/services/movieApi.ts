@@ -1,6 +1,6 @@
-import { GALLERY } from "~/helpers/config";
-import request from "./request";
-import { IMovieWithSeo, IListMovieWithSeo } from "~/types/movie";
+import { GALLERY } from '~/helpers/config';
+import request from './request';
+import { IMovieWithSeo, IListMovieWithSeo } from '~/types/movie';
 
 export const fetchListNewMovie = async () => {
   const res = await request<IListMovieWithSeo>(
@@ -14,12 +14,14 @@ export const fetchListNewMovie = async () => {
 };
 
 export const getMovieBySlug = async (slug: string) => {
-  return await request<IMovieWithSeo>("/v1/api/phim/" + slug);
+  return await request<IMovieWithSeo>('/v1/api/phim/' + slug, {
+    next: { revalidate: 3600 * 24 },
+  });
 };
 
 export const fetchListMovieByCategories = async (categories: string) => {
   const res = await request<IListMovieWithSeo>(`/v1/api/${categories}`, {
-    next: { revalidate: 3600 },
+    next: { revalidate: 3600 * 24 },
   });
   return res;
 };
@@ -33,9 +35,9 @@ export const fetchListMovieByCategories = async (categories: string) => {
 
 export const fetchListSingleMovieByGallery = async () => {
   const res = await request<IListMovieWithSeo>(
-    "/v1/api" + GALLERY.single.slug,
+    '/v1/api' + GALLERY.single.slug,
     {
-      next: { revalidate: 3600 },
+      next: { revalidate: 3600 * 24 },
     }
   );
 
@@ -44,9 +46,9 @@ export const fetchListSingleMovieByGallery = async () => {
 
 export const fetchListSeriesMovieByGallery = async () => {
   const res = await request<IListMovieWithSeo>(
-    "/v1/api" + GALLERY.series.slug,
+    '/v1/api' + GALLERY.series.slug,
     {
-      next: { revalidate: 3600 },
+      next: { revalidate: 3600 * 24 },
     }
   );
   return res.data;
@@ -54,9 +56,9 @@ export const fetchListSeriesMovieByGallery = async () => {
 
 export const fetchListCartoonByGallery = async () => {
   const res = await request<IListMovieWithSeo>(
-    "/v1/api" + GALLERY.cartoon.slug,
+    '/v1/api' + GALLERY.cartoon.slug,
     {
-      next: { revalidate: 3600 },
+      next: { revalidate: 3600 * 24 },
     }
   );
   return res.data;
@@ -64,9 +66,9 @@ export const fetchListCartoonByGallery = async () => {
 
 export const fetchUpcomingMovie = async () => {
   const res = await request<IListMovieWithSeo>(
-    "/v1/api" + GALLERY.upcoming.slug,
+    '/v1/api' + GALLERY.upcoming.slug,
     {
-      next: { revalidate: 3600 },
+      next: { revalidate: 3600 * 24 },
     }
   );
   return res.data;
