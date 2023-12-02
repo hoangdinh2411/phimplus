@@ -1,17 +1,17 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import Grid from '@mui/material/Grid';
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
-import ExpandMore from '@mui/icons-material/ExpandMore';
-import BasicSelect from '~/components/UI/BasicSelect';
-import { MENU_LIST, SORT_FIELD, SPECIAL_PATH } from '~/helpers/config';
-import useApp from '~/hooks/useApp';
-import { getDataSelect, listYear } from '~/helpers/functions';
-import Button from '@mui/material/Button';
-import { useRouter } from 'next/navigation';
+"use client";
+import React, { useState, useEffect } from "react";
+import Grid from "@mui/material/Grid";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMore from "@mui/icons-material/ExpandMore";
+import BasicSelect from "~/components/UI/BasicSelect";
+import { MENU_LIST, SORT_FIELD, SPECIAL_PATH } from "~/helpers/config";
+import useApp from "~/hooks/useApp";
+import { getDataSelect, listYear } from "~/helpers/functions";
+import Button from "@mui/material/Button";
+import { useRouter } from "next/navigation";
 
 interface IFilter {
   sort_field: string;
@@ -25,18 +25,18 @@ interface Props {
   searchParams: { [key: string]: string | string[] | undefined };
 }
 export default function Filter({ slug, searchParams }: Props) {
-  const pathname = slug.join('/');
+  const pathname = slug.join("/");
   const { sort_field, category, country, year } = searchParams;
 
   const router = useRouter();
   const { categories, countries } = useApp();
   const arrayYear = listYear();
   const [filter, setFilter] = useState<IFilter>({
-    sort_field: '_id',
-    pathname: '',
-    category: 'all',
-    country: 'all',
-    year: 'all',
+    sort_field: "year",
+    pathname: "",
+    category: "all",
+    country: "all",
+    year: "all",
   });
   const [isShowAccordion, setIsShowAccordion] = useState<boolean>(false);
   const [isChanged, setIsChanged] = useState<boolean>(false);
@@ -50,8 +50,8 @@ export default function Filter({ slug, searchParams }: Props) {
         setIsShowAccordion(true);
       }
     }
-    window.addEventListener('resize', showAccordion);
-    return () => window.removeEventListener('resize', showAccordion);
+    window.addEventListener("resize", showAccordion);
+    return () => window.removeEventListener("resize", showAccordion);
   }, []);
 
   const getSpecialPath = (name: string) => {
@@ -62,13 +62,13 @@ export default function Filter({ slug, searchParams }: Props) {
       return pathname;
     }
     if (pathname.includes(name)) {
-      return pathname.substring(pathname.lastIndexOf('/') + 1);
+      return pathname.substring(pathname.lastIndexOf("/") + 1);
     }
     return undefined;
   };
 
   const getSearchParam = (param: string | string[] | undefined) => {
-    if (param === undefined || String(param) === '') {
+    if (param === undefined || String(param) === "") {
       return undefined;
     }
     return String(param);
@@ -76,23 +76,23 @@ export default function Filter({ slug, searchParams }: Props) {
 
   useEffect(() => {
     setFilter({
-      sort_field: getSearchParam(sort_field) || '_id',
+      sort_field: getSearchParam(sort_field) || "_id",
       category:
         getSpecialPath(SPECIAL_PATH.THE_LOAI) ||
         getSearchParam(category) ||
-        'all',
+        "all",
       country:
         getSpecialPath(SPECIAL_PATH.QUOC_GIA) ||
         getSearchParam(country) ||
-        'all',
-      year: getSearchParam(year) || 'all',
-      pathname: getSpecialPath(SPECIAL_PATH.DANH_SACH) || 'danh-sach/phim-moi',
+        "all",
+      year: getSearchParam(year) || "all",
+      pathname: getSpecialPath(SPECIAL_PATH.DANH_SACH) || "danh-sach/phim-moi",
     });
   }, [slug, searchParams]);
 
   type FilterName = keyof IFilter;
   function isFilterName(name: string): name is FilterName {
-    return ['sort_field', 'pathname', 'category', 'country', 'year'].includes(
+    return ["sort_field", "pathname", "category", "country", "year"].includes(
       name
     );
   }
@@ -117,8 +117,8 @@ export default function Filter({ slug, searchParams }: Props) {
       keyof IFilter,
       string
     ][]) {
-      if (value === 'all') {
-        valueFilter[key] = '';
+      if (value === "all") {
+        valueFilter[key] = "";
       }
     }
     router.replace(
@@ -131,80 +131,80 @@ export default function Filter({ slug, searchParams }: Props) {
       sx={{
         p: 8,
         mt: 8,
-        borderRadius: '8px !important',
-        backgroundColor: 'background.default',
+        borderRadius: "8px !important",
+        backgroundColor: "background.default",
       }}
     >
       {isShowAccordion ? (
         <AccordionSummary
           expandIcon={<ExpandMore />}
-          aria-label='Expand'
-          aria-controls='-content'
-          id='-header'
+          aria-label="Expand"
+          aria-controls="-content"
+          id="-header"
         >
           <Typography>Duyệt Phim</Typography>
         </AccordionSummary>
       ) : null}
       <AccordionDetails>
-        <Grid container spacing={8} sx={{ alignItems: 'center' }}>
-          <Grid item xl='auto' md={4} xs={12}>
+        <Grid container spacing={8} sx={{ alignItems: "center" }}>
+          <Grid item xl="auto" md={4} xs={12}>
             <BasicSelect
               value={filter.sort_field}
               handleChange={handleSetFilter}
-              name='sort_field'
+              name="sort_field"
               data={SORT_FIELD}
             />
           </Grid>
 
-          <Grid item xl='auto' md={4} xs={12}>
+          <Grid item xl="auto" md={4} xs={12}>
             <BasicSelect
               value={filter.pathname}
               handleChange={handleSetFilter}
-              name='pathname'
+              name="pathname"
               data={[...MENU_LIST]}
             />
           </Grid>
-          <Grid item xl='auto' md={4} xs={12}>
+          <Grid item xl="auto" md={4} xs={12}>
             <BasicSelect
               value={filter.category}
               handleChange={handleSetFilter}
-              name='category'
+              name="category"
               data={[
-                { id: '0', name: 'Tất cả các thể loại', slug: 'all' },
+                { id: "0", name: "Tất cả các thể loại", slug: "all" },
                 ...getDataSelect(categories),
               ]}
             />
           </Grid>
 
-          <Grid item xl='auto' md={4} xs={12}>
+          <Grid item xl="auto" md={4} xs={12}>
             <BasicSelect
               value={filter.country}
               handleChange={handleSetFilter}
-              name='country'
+              name="country"
               data={[
-                { id: '0', name: 'Tất cả quốc gia', slug: 'all' },
+                { id: "0", name: "Tất cả quốc gia", slug: "all" },
                 ...getDataSelect(countries),
               ]}
             />
           </Grid>
 
-          <Grid item xl='auto' md={4} xs={12}>
+          <Grid item xl="auto" md={4} xs={12}>
             <BasicSelect
               value={filter.year}
               handleChange={handleSetFilter}
-              name='year'
+              name="year"
               data={[
-                { id: '0', name: 'Tất cả quốc các năm', slug: 'all' },
+                { id: "0", name: "Tất cả quốc các năm", slug: "all" },
                 ...arrayYear,
               ]}
             />
           </Grid>
 
-          <Grid item xl='auto' md={4} xs={12}>
+          <Grid item xl="auto" md={4} xs={12}>
             <Button
-              variant='contained'
-              size='large'
-              sx={{ fontSize: '14px', textTransform: 'math-auto' }}
+              variant="contained"
+              size="large"
+              sx={{ fontSize: "14px", textTransform: "math-auto" }}
               onClick={handleFilterMovie}
             >
               Lọc Phim
