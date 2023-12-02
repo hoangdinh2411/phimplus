@@ -19,6 +19,7 @@
     "next": "14.0.1",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^18",
+    "react-player": "^2.13.0",
     "swiper": "^11.0.4"
   },
   "devDependencies": {

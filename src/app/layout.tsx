@@ -21,6 +21,12 @@ export const metadata: Metadata = {
     template: `%s | ${APP_CONFIG.NAME}`,
     default: APP_CONFIG.NAME,
   },
+  icons: {
+    icon: ["/favicon.ico?v=1"],
+    apple: ["apple-touch-icon.png?v=1"],
+    shortcut: ["apple-touch-icon.png"],
+  },
+  manifest: "site.webmanifest",
   applicationName: APP_CONFIG.NAME,
   description: APP_CONFIG.DESCRIPTION,
   authors: [
