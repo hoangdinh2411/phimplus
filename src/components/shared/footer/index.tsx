@@ -4,7 +4,8 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Logo from './Logo';
 import Menu from './Menu';
-export default function Footer() {
+import Script from 'next/script';
+function Footer() {
   return (
     <Container
       maxWidth={false}
@@ -55,6 +56,18 @@ export default function Footer() {
       >
         © PhimPlus.com - 2023
       </Typography>
+      <Script src='https://www.googletagmanager.com/gtag/js?id=G-CL984922DN'></Script>
+      <Script id='google-analytic'>
+        {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', 'G-CL984922DN');
+            `}
+      </Script>
     </Container>
   );
 }
+
+export default React.memo(Footer);

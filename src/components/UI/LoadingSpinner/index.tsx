@@ -1,8 +1,6 @@
 import React from 'react';
-import './LoadingSpinner.css';
-type Props = {};
 
-export default function LoadingSpinner({}: Props) {
+function LoadingSpinner() {
   return (
     <div className='lds-spinner'>
       <div></div>
@@ -20,3 +18,4 @@ export default function LoadingSpinner({}: Props) {
     </div>
   );
 }
+export default React.memo(LoadingSpinner);

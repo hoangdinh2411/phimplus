@@ -1,12 +1,11 @@
 'use client';
-import { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Image from 'next/image';
 import Link from 'next/link';
 import Content from './Content';
 import { APP_ROUTERS } from '~/helpers/config';
-import Skeleton from '../Skeleton/ImageSkeleton';
+import React from 'react';
 type Props = {
   slug: string;
   thumbnail: string;
@@ -15,21 +14,10 @@ type Props = {
   tagTitle: string;
 };
 
-export default function MovieCard({
-  slug,
-  thumbnail,
-  name,
-  view,
-  tagTitle,
-}: Props) {
-  const [showSkeleton, setShowSkeleton] = useState<boolean>(true);
-
+function MovieCard({ slug, thumbnail, name, view, tagTitle }: Props) {
   if (!view || view < 0) view = 3;
   if (view && view > 5) view = 5;
 
-  const hideSkeleton = () => {
-    setShowSkeleton(false);
-  };
   return (
     <Card
       sx={{
@@ -53,16 +41,6 @@ export default function MovieCard({
         },
       }}
     >
-      <Skeleton
-        showSkeleton={showSkeleton}
-        sx={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          zIndex: 2,
-        }}
-      />
-
       <CardContent
         component='figure'
         sx={{
@@ -98,11 +76,14 @@ export default function MovieCard({
           }}
         >
           <Image
-            src={thumbnail}
+            src={'https://img.ophim9.cc/uploads/movies/' + thumbnail}
             alt={name}
+            quality={50}
             fill
-            loading='eager'
-            sizes='100% 100%'
+            loading='lazy'
+            blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYA'
+            placeholder='blur'
+            sizes='(min-width: 270px) 20vh, 270px'
             style={{
               objectFit: 'cover',
               top: 0,
@@ -111,7 +92,6 @@ export default function MovieCard({
               zIndex: 1,
               transition: 'all 0.3s linear',
             }}
-            onLoad={hideSkeleton}
           />
           <Content name={name} view={view} tagTitle={tagTitle} slug={slug} />
         </Link>
@@ -119,3 +99,5 @@ export default function MovieCard({
     </Card>
   );
 }
+
+export default React.memo(MovieCard);

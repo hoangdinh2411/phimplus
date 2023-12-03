@@ -9,7 +9,6 @@ import { color } from '~/theme/variables/palette';
 import Tag from '~/components/UI/Tag';
 import { IMovieDetail } from '~/types/movie';
 import { joinToStringFromArray } from '~/helpers/functions';
-import Skeleton from '~/components/UI/Skeleton/ImageSkeleton';
 import Image from 'next/image';
 import { APP_ROUTERS } from '~/helpers/config';
 import Link from 'next/link';
@@ -30,10 +29,6 @@ export default function Content({ item }: Props) {
     slug,
   } = item;
 
-  const [showSkeleton, setShowSkeleton] = React.useState<boolean>(true);
-  const hideSkeleton = () => {
-    setShowSkeleton(false);
-  };
   return (
     <Box
       component='div'
@@ -42,7 +37,6 @@ export default function Content({ item }: Props) {
         height: '100%',
       }}
     >
-      <Skeleton showSkeleton={showSkeleton} />
       <Box
         component='figure'
         sx={{
@@ -65,14 +59,16 @@ export default function Content({ item }: Props) {
             width: '100%',
             height: '100%',
           }}
-          prefetch={false}
         >
           <Image
-            src={item.poster_url}
+            quality={75}
+            src={'https://img.ophim9.cc/uploads/movies/' + item.poster_url}
             alt={item.name}
             fill={true}
-            priority={true}
-            sizes='100% 100%'
+            loading='lazy'
+            sizes='(max-width: 1000px) 20vw, 1000px'
+            placeholder='blur'
+            blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYA'
             style={{
               objectFit: 'contain',
               top: 0,
@@ -81,7 +77,6 @@ export default function Content({ item }: Props) {
               zIndex: 2,
               transition: 'all 0.3s linear',
             }}
-            onLoad={hideSkeleton}
           />
         </Link>
       </Box>

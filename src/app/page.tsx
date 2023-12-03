@@ -10,9 +10,9 @@ import {
   fetchListSingleMovieByGallery,
   fetchUpcomingMovie,
 } from '~/services/movieApi';
-import AdsSlideSkeleton from '~/components/UI/Skeleton/AdsSlideSkeleton';
 import ListMovieSkeleton from '~/components/UI/Skeleton/ListMovieSkeleton';
 import Box from '@mui/material/Box';
+import AdsSlideSkeleton from '~/components/UI/Skeleton/AdsSlideSkeleton';
 const AdsSlide = dynamic(() => import('./_pages/home/AdsSlide/AdsSlide'), {
   loading: () => <AdsSlideSkeleton />,
   ssr: false,
