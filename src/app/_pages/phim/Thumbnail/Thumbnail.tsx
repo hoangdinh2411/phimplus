@@ -52,9 +52,9 @@ export default function Thumbnail({}: Props) {
             alt={movie.item.name}
             fill
             loading='eager'
-            objectFit='cover'
             sizes='100%,100%'
             style={{
+              objectFit: 'cover',
               position: 'absolute',
               top: 0,
               left: 0,
