@@ -5,7 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Logo from './Logo';
 import Navbar from './Navbar';
 
-export default function Header() {
+function Header() {
   return (
     <AppBar position='relative' color='transparent'>
       <Container
@@ -36,3 +36,5 @@ export default function Header() {
     </AppBar>
   );
 }
+
+export default React.memo(Header);

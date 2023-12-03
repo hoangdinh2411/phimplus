@@ -14,12 +14,7 @@ interface Props {
   name: string;
 }
 
-export default function BasicSelect({
-  value,
-  data,
-  handleChange,
-  name,
-}: Props) {
+function BasicSelect({ value, data, handleChange, name }: Props) {
   return (
     <Box sx={{ minWidth: 150 }}>
       <FormControl fullWidth>
@@ -51,3 +46,5 @@ export default function BasicSelect({
     </Box>
   );
 }
+
+export default React.memo(BasicSelect);

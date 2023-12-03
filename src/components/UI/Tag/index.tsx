@@ -6,7 +6,7 @@ interface TagProps extends BoxProps {
   title: string;
 }
 
-export default function Tag(props: TagProps) {
+function Tag(props: TagProps) {
   const { title, sx, ...rest } = props;
   return (
     <Box
@@ -43,3 +43,5 @@ export default function Tag(props: TagProps) {
     </Box>
   );
 }
+
+export default React.memo(Tag);

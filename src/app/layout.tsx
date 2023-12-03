@@ -9,7 +9,6 @@ import { fetchListCategory, fetchListCountries } from '~/services/appApi';
 
 import LoadingSpinner from '~/components/UI/LoadingSpinner';
 import metadataConfig from '~/helpers/metadataConfig';
-import Script from 'next/script';
 
 export const metadata: Metadata = metadataConfig;
 
@@ -33,16 +32,6 @@ export default async function RootLayout({
             </MUIThemeProvider>
           </AppContextProvider>
         </Suspense>
-        <Script src='https://www.googletagmanager.com/gtag/js?id=G-CL984922DN'></Script>
-        <Script id='google-analytic'>
-          {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-            
-              gtag('config', 'G-CL984922DN');
-            `}
-        </Script>
       </body>
     </html>
   );

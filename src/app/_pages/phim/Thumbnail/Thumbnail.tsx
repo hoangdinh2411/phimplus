@@ -22,7 +22,7 @@ export default function Thumbnail({}: Props) {
           margin: '0 auto',
           minWidth: {
             md: '100%',
-            xs: 300,
+            xs: 270,
           },
           maxWidth: {
             xs: 350,
@@ -48,13 +48,14 @@ export default function Thumbnail({}: Props) {
           }}
         >
           <Image
-            src={movie.item.thumb_url}
+            placeholder='blur'
+            blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYA'
+            src={'https://img.ophim9.cc/uploads/movies/' + movie.item.thumb_url}
             alt={movie.item.name}
             fill
-            loading='eager'
-            sizes='100%,100%'
+            loading='lazy'
+            sizes='(min-width: 270px) 40vh, 270'
             style={{
-              objectFit: 'cover',
               position: 'absolute',
               top: 0,
               left: 0,

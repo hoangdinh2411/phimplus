@@ -3,12 +3,10 @@ import React, { IframeHTMLAttributes } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Skeleton from '../Skeleton/ImageSkeleton';
-// import CardMedia from '@mui/material/CardMedia';
-// import { imageUrl } from '~/helpers/image-loader';
-// import Controller from './Controller';
+
 interface PlayerProps extends IframeHTMLAttributes<HTMLIFrameElement> {}
 
-export default function Player(props: PlayerProps) {
+function Player(props: PlayerProps) {
   const { style, src, ...rest } = props;
   const [showSkeleton, setShowSkeleton] = React.useState<boolean>(true);
 
@@ -64,20 +62,8 @@ export default function Player(props: PlayerProps) {
           allowFullScreen
         ></iframe>
       </CardContent>
-      {/* <CardContent
-        sx={{
-          p: '0 !important',
-          position: 'absolute',
-          bottom: 0,
-          left: 0,
-          width: '100%',
-          height: 60,
-          zIndex: 2,
-          backgroundColor: 'background.paper',
-        }}
-      >
-        <Controller />
-      </CardContent> */}
     </Card>
   );
 }
+
+export default React.memo(Player);
