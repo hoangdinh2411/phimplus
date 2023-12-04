@@ -10,8 +10,8 @@ const ListMovie = dynamic(() => import('~/app/_pages/home/ListMovie'), {
 });
 import Filter from '~/app/_pages/list/Filter';
 import { getFilterQueries } from '~/helpers/functions';
-import NotFoundForFilter from '~/app/_pages/list/NotFound';
 import { APP_CONFIG } from '~/helpers/config';
+import { notFound } from 'next/navigation';
 
 interface Props {
   params: { slug: string[] };
@@ -57,7 +57,7 @@ export default async function Page({ params: { slug }, searchParams }: Props) {
   );
 
   if (!data || data?.items.length === 0) {
-    return <NotFoundForFilter />;
+    return notFound();
   }
   return (
     <Container
@@ -69,9 +69,10 @@ export default async function Page({ params: { slug }, searchParams }: Props) {
           lg: 0,
         },
       }}
+      component='section'
     >
       <Filter slug={slug} searchParams={searchParams} />
-      <ListMovie listMovie={data.items} seeMore={false} />
+      <ListMovie listMovie={data.items ? data.items : []} seeMore={false} />
       <MuiPagination
         filterQueries={filterQueries}
         totalItem={data.params?.pagination.totalItems}

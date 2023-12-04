@@ -19,7 +19,7 @@ export default function NotFound() {
     >
       <Box component='div' py={20}>
         <Typography variant='h4' component='h4' mb={20}>
-          Error: 404 - Không tìm thấy trang
+          Error: 404 - Không tìm thấy phim
         </Typography>
         <Button variant='contained' color='primary'>
           <Link

@@ -4,9 +4,9 @@ import { fetchSearchMovie } from '~/services/movieApi';
 import Container from '@mui/material/Container';
 import ListMovie from '../_pages/home/ListMovie';
 import MuiPagination from '../_pages/list/Pagination';
-import NotFoundForSearch from '../_pages/search/NotFoundForSearch';
 import { getFilterQueries } from '~/helpers/functions';
 import Typography from '@mui/material/Typography';
+import { notFound } from 'next/navigation';
 interface Props {
   searchParams: { [key: string]: string | string[] | undefined };
 }
@@ -36,7 +36,7 @@ export default async function SearchMovie({ searchParams }: Props) {
   let filterQueries = getFilterQueries(searchParams);
   const { data } = await fetchSearchMovie(filterQueries || '');
   if (!data || data?.items.length === 0) {
-    return <NotFoundForSearch />;
+    return notFound();
   }
 
   return (

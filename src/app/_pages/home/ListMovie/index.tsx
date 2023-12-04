@@ -40,7 +40,7 @@ export default function ListMovie({
                   name={item.name}
                   slug={item.slug}
                   thumbnail={item.thumb_url}
-                  tagTitle={item.category[0].name}
+                  tagTitle={item.category && item.category[0].name}
                 />
               </Grid>
             );

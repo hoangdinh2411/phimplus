@@ -18,7 +18,6 @@ function BasicSelect({ value, data, handleChange, name }: Props) {
   return (
     <Box sx={{ minWidth: 150 }}>
       <FormControl fullWidth>
-        {/* <InputLabel id={`${name}-label`}>{label}</InputLabel> */}
         <Select
           labelId={`${name}-label`}
           id={name}
