@@ -66,7 +66,7 @@ export default function Content({ item }: Props) {
             alt={item.name}
             fill={true}
             loading='lazy'
-            sizes='(max-width: 1000px) 20vw, 1000px'
+            sizes='100%'
             placeholder='blur'
             blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYA'
             style={{

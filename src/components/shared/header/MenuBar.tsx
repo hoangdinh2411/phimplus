@@ -3,8 +3,6 @@ import React from 'react';
 import { MENU_BAR } from '~/helpers/config';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import Link from '@mui/material/Link';
-import NextLink from 'next/link';
 import Popover from '@mui/material/Popover';
 import Grid from '@mui/material/Grid';
 import useApp from '~/hooks/useApp';
@@ -12,6 +10,8 @@ import { Item } from '~/types/app';
 import { usePathname } from 'next/navigation';
 import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
 import { InitialStateAppContextType } from '~/provider/AppContextProvider';
+import Link from 'next/link';
+import Typography from '@mui/material/Typography';
 type Props = {};
 
 function MenuBar({}: Props) {
@@ -53,29 +53,38 @@ function MenuBar({}: Props) {
           }}
         >
           <Link
-            noWrap
-            variant='h6'
             href={page.path}
             onClick={
               page.path !== '' ? () => {} : (e) => showSubMenu(e, page.key)
             }
-            sx={{
-              color: !pathname.includes(page.active)
-                ? 'text.secondary'
-                : 'primary.dark',
-              display: 'flex',
-              alignItems: 'center',
-            }}
-            component={NextLink}
+            prefetch={false}
           >
-            {page.title}
-            {page.path === '' ? (
-              <KeyboardArrowDownOutlinedIcon
-                sx={{
-                  ml: 2,
-                }}
-              />
-            ) : null}
+            <Typography
+              variant='body1'
+              component='span'
+              color='text.primary'
+              noWrap
+              sx={{
+                color: !pathname.includes(page.active)
+                  ? 'text.secondary'
+                  : 'primary.dark',
+                display: 'flex',
+                alignItems: 'center',
+                ':hover': {
+                  color: 'primary.dark',
+                },
+              }}
+              textAlign='center'
+            >
+              {page.title}
+              {page.path === '' ? (
+                <KeyboardArrowDownOutlinedIcon
+                  sx={{
+                    ml: 2,
+                  }}
+                />
+              ) : null}
+            </Typography>
           </Link>
 
           {page.path === '' && (
@@ -100,22 +109,25 @@ function MenuBar({}: Props) {
                 {subMenu.map((item: Item) => (
                   <Grid key={item.slug} item md={3} marginY={4}>
                     <Link
-                      noWrap
-                      padding={3}
-                      sx={{
-                        '&:hover': {
-                          backgroundColor: 'primary.dark',
-                          borderRadius: 3,
-                        },
-                        margin: 'auto',
-                      }}
-                      variant='h6'
-                      color='text.secondary'
                       href={item.slug}
-                      component={NextLink}
                       onClick={closeSubMenu}
+                      prefetch={false}
                     >
-                      {item.name}
+                      <Typography
+                        component='span'
+                        variant='body1'
+                        color='text.primary'
+                        noWrap
+                        textAlign='center'
+                        sx={{
+                          ':hover': {
+                            backgroundColor: 'primary.dark',
+                            borderRadius: 3,
+                          },
+                        }}
+                      >
+                        {item.name}
+                      </Typography>
                     </Link>
                   </Grid>
                 ))}

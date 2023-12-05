@@ -55,7 +55,7 @@ export default async function Home() {
     await fetchDifferentTypeOfMoviesForHomePage();
   return (
     <Box>
-      <AdsSlide items={newMovies.items} />
+      <AdsSlide items={newMovies.items.slice(0, 6)} />
       <Container maxWidth='lg' component='section'>
         <MovieSlide
           items={upcomingMovies?.items}
