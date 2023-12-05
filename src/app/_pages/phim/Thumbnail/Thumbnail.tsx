@@ -54,7 +54,7 @@ export default function Thumbnail({}: Props) {
             alt={movie.item.name}
             fill
             loading='lazy'
-            sizes='(min-width: 270px) 40vh, 270'
+            sizes='285px 400px'
             style={{
               position: 'absolute',
               top: 0,
@@ -82,7 +82,6 @@ export default function Thumbnail({}: Props) {
       >
         <Link
           href={APP_ROUTERS.WATCH + movie.item.slug}
-          prefetch={false}
           style={{ margin: '0px auto' }}
         >
           <Button

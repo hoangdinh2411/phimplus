@@ -21,6 +21,7 @@
     ],
     "no-unused-labels": "error",
     "no-unused-expressions": "error",
-    "no-use-before-define": "error"
+    "no-use-before-define": "error",
+    "react-hooks/exhaustive-deps": "off"
   }
 }

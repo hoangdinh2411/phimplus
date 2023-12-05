@@ -65,7 +65,6 @@ function MovieCard({ slug, thumbnail, name, view, tagTitle }: Props) {
       >
         <Link
           href={APP_ROUTERS.MOVIE + slug}
-          prefetch={false}
           title={name}
           style={{
             zIndex: 1,
@@ -78,12 +77,12 @@ function MovieCard({ slug, thumbnail, name, view, tagTitle }: Props) {
           <Image
             src={'https://img.ophim9.cc/uploads/movies/' + thumbnail}
             alt={name}
-            quality={50}
+            quality={75}
             fill
             loading='lazy'
             blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYA'
             placeholder='blur'
-            sizes='(min-width: 270px) 20vh, 270px'
+            sizes='270px'
             style={{
               objectFit: 'cover',
               top: 0,
