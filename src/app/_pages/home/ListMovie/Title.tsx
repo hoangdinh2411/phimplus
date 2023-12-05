@@ -55,7 +55,7 @@ export default function Title({ title, seeMore, href = '' }: Props) {
               alignItems: 'center',
             }}
           >
-            <Link href={href}>
+            <Link href={href} prefetch>
               <Typography
                 variant='body1'
                 fontSize='16px'
