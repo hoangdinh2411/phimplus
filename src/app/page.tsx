@@ -1,28 +1,27 @@
-import Container from '@mui/material/Container';
-import React from 'react';
-import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
-import { GALLERY } from '~/helpers/config';
+import Container from "@mui/material/Container";
+import React from "react";
+import { Metadata } from "next";
+import dynamic from "next/dynamic";
+import { GALLERY } from "~/helpers/config";
 import {
   fetchListCartoonByGallery,
   fetchListNewMovie,
   fetchListSeriesMovieByGallery,
   fetchListSingleMovieByGallery,
   fetchUpcomingMovie,
-} from '~/services/movieApi';
-import ListMovieSkeleton from '~/components/UI/Skeleton/ListMovieSkeleton';
-import Box from '@mui/material/Box';
-import AdsSlideSkeleton from '~/components/UI/Skeleton/AdsSlideSkeleton';
-const AdsSlide = dynamic(() => import('./_pages/home/AdsSlide/AdsSlide'), {
+} from "~/services/movieApi";
+import Box from "@mui/material/Box";
+import AdsSlideSkeleton from "~/components/UI/Skeleton/AdsSlideSkeleton";
+import { IListMovieWithSeo } from "~/types/movie";
+const AdsSlide = dynamic(() => import("./_pages/home/AdsSlide/AdsSlide"), {
   loading: () => <AdsSlideSkeleton />,
   ssr: false,
 });
 const MovieSlide = dynamic(
-  () => import('~/components/shared/slide/MovieSlide'),
-  { loading: () => <ListMovieSkeleton />, ssr: false }
+  () => import("~/components/shared/slide/MovieSlide"),
+  { ssr: false }
 );
-const ListMovie = dynamic(() => import('~/app/_pages/home/ListMovie'), {
-  loading: () => <ListMovieSkeleton />,
+const ListMovie = dynamic(() => import("~/app/_pages/home/ListMovie"), {
   ssr: false,
 });
 
@@ -40,23 +39,18 @@ export async function generateMetadata(parent: any): Promise<Metadata> {
   };
 }
 
-async function fetchDifferentTypeOfMoviesForHomePage() {
-  return await Promise.all([
-    fetchListNewMovie(),
-    fetchUpcomingMovie(),
-    fetchListSingleMovieByGallery(),
-    fetchListSeriesMovieByGallery(),
-    fetchListCartoonByGallery(),
-  ]);
-}
-
 export default async function Home() {
-  const [newMovies, upcomingMovies, singleMovie, seriesMovie, cartoonMovie] =
-    await fetchDifferentTypeOfMoviesForHomePage();
+  const newMovies = await fetchListNewMovie();
+  const upcomingMovies = await fetchUpcomingMovie();
+  const singleMovie: Promise<IListMovieWithSeo> =
+    fetchListSingleMovieByGallery();
+  const seriesMovie: Promise<IListMovieWithSeo> =
+    fetchListSeriesMovieByGallery();
+  const cartoonMovie: Promise<IListMovieWithSeo> = fetchListCartoonByGallery();
   return (
     <Box>
       <AdsSlide items={newMovies.items.slice(0, 6)} />
-      <Container maxWidth='lg' component='section'>
+      <Container maxWidth="lg" component="section">
         <MovieSlide
           items={upcomingMovies?.items}
           title={GALLERY.upcoming.name}
@@ -64,7 +58,7 @@ export default async function Home() {
         />
       </Container>
       <Container
-        component='main'
+        component="main"
         maxWidth={false}
         disableGutters
         sx={{
@@ -77,21 +71,24 @@ export default async function Home() {
       >
         <ListMovie
           limit={8}
-          listMovie={singleMovie.items}
+          listMovie={singleMovie}
           title={GALLERY.single.name}
           href={GALLERY.single.slug}
+          YPosition={600}
         />
         <ListMovie
           limit={8}
-          listMovie={seriesMovie.items}
+          listMovie={seriesMovie}
           title={GALLERY.series.name}
           href={GALLERY.series.slug}
+          YPosition={1600}
         />
         <ListMovie
           limit={8}
-          listMovie={cartoonMovie.items}
+          listMovie={cartoonMovie}
           title={GALLERY.cartoon.name}
           href={GALLERY.cartoon.slug}
+          YPosition={2500}
         />
       </Container>
     </Box>
