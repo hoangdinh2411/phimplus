@@ -25,17 +25,12 @@ const ListMovie = dynamic(() => import("~/app/_pages/home/ListMovie"), {
   ssr: false,
 });
 
-export async function generateMetadata(parent: any): Promise<Metadata> {
-  const newMovies = await fetchListNewMovie();
-  const previousImages = (await parent).openGraph?.images || [];
+export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: newMovies.seoOnPage.titleHead || newMovies.titlePage,
-    description: newMovies.seoOnPage?.descriptionHead,
-    openGraph: {
-      title: newMovies.titlePage,
-      description: newMovies.seoOnPage?.descriptionHead,
-      images: [...newMovies.seoOnPage.og_image, ...previousImages],
-    },
+    title:
+      "Dữ liệu phim vietsub miễn phí mới nhất. Cập nhật nhanh chóng, chất lượng cao và không quảng cáo",
+    description:
+      "Website cung cấp phim miễn phí nhanh chất lượng cao. Phim online VietSub, Thuyết minh, lồng tiếng chất lượng Full HD. Nguồn phim vietsub chất lượng cao cập nhật nhanh nhất",
   };
 }
 
