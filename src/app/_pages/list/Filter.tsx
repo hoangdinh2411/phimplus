@@ -50,6 +50,7 @@ export default function Filter({ slug, searchParams }: Props) {
         setIsShowAccordion(true);
       }
     }
+    showAccordion();
     window.addEventListener("resize", showAccordion);
     return () => window.removeEventListener("resize", showAccordion);
   }, []);
