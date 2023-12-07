@@ -95,6 +95,10 @@ export const SPECIAL_PATH = {
 };
 
 export const GALLERY = {
+  new: {
+    name: 'Phim mới cập nhật',
+    slug: '/',
+  },
   upcoming: {
     name: 'Phim sắp chiếu',
     slug: '/danh-sach/phim-sap-chieu',
