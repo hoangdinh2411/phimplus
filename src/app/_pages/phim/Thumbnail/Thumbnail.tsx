@@ -83,6 +83,7 @@ export default function Thumbnail({}: Props) {
         <Link
           href={APP_ROUTERS.WATCH + movie.item.slug}
           style={{ margin: '0px auto' }}
+          prefetch={false}
         >
           <Button
             variant='contained'

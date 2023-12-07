@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-export default function NotFound() {
+export default function MoviesNotFound() {
   return (
     <Container
       maxWidth={false}
