@@ -1,26 +1,26 @@
-import Container from '@mui/material/Container';
-import React from 'react';
-import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
-import { GALLERY } from '~/helpers/config';
+import Container from "@mui/material/Container";
+import React from "react";
+import { Metadata } from "next";
+import dynamic from "next/dynamic";
+import { GALLERY } from "~/helpers/config";
 import {
   fetchListCartoonByGallery,
   fetchListNewMovie,
   fetchListSeriesMovieByGallery,
   fetchListSingleMovieByGallery,
-} from '~/services/movieApi';
-import Box from '@mui/material/Box';
-import AdsSlideSkeleton from '~/components/UI/Skeleton/AdsSlideSkeleton';
-import { IListMovieWithSeo } from '~/types/movie';
-const AdsSlide = dynamic(() => import('./_pages/home/AdsSlide/AdsSlide'), {
+} from "~/services/movieApi";
+import Box from "@mui/material/Box";
+import AdsSlideSkeleton from "~/components/UI/Skeleton/AdsSlideSkeleton";
+import { IListMovieWithSeo } from "~/types/movie";
+const AdsSlide = dynamic(() => import("./_pages/home/AdsSlide/AdsSlide"), {
   loading: () => <AdsSlideSkeleton />,
   ssr: false,
 });
 const MovieSlide = dynamic(
-  () => import('~/components/shared/slide/MovieSlide'),
+  () => import("~/components/shared/slide/MovieSlide"),
   { ssr: false }
 );
-const ListMovie = dynamic(() => import('~/app/_pages/home/ListMovie'), {
+const ListMovie = dynamic(() => import("~/app/_pages/home/ListMovie"), {
   ssr: false,
 });
 
@@ -28,7 +28,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: `Xem phim FullHD miễn phí mới nhất năm ${new Date().getFullYear()}. Cập nhật nhanh chóng, chất lượng cao và không quảng cáo`,
     description:
-      'Website cung cấp phim miễn phí nhanh chất lượng cao. Phim online VietSub, Thuyết minh, lồng tiếng chất lượng Full HD. Nguồn phim vietsub chất lượng cao cập nhật nhanh nhất',
+      "Website cung cấp phim miễn phí nhanh chất lượng cao. Phim online VietSub, Thuyết minh, lồng tiếng chất lượng Full HD. Nguồn phim vietsub chất lượng cao cập nhật nhanh nhất",
   };
 }
 
@@ -42,7 +42,7 @@ export default async function Home() {
   return (
     <Box>
       <AdsSlide items={newMovies.items.slice(0, 6)} />
-      <Container maxWidth='lg' component='section'>
+      <Container maxWidth="lg" component="section">
         <MovieSlide
           items={newMovies?.items.slice(6, newMovies.items.length)}
           title={GALLERY.new.name}
@@ -50,13 +50,13 @@ export default async function Home() {
         />
       </Container>
       <Container
-        component='main'
+        component="main"
         maxWidth={false}
         disableGutters
         sx={{
           py: 10,
           px: {
-            xs: 4,
+            xs: 2,
             lg: 0,
           },
         }}

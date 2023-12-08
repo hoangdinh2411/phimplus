@@ -1,14 +1,14 @@
-import { Metadata, ResolvingMetadata } from 'next';
-import dynamic from 'next/dynamic';
-import React from 'react';
-import { fetchListMovieByCategories } from '~/services/movieApi';
-import Container from '@mui/material/Container';
-import MuiPagination from '../../_pages/list/Pagination';
-import Filter from '~/app/_pages/list/Filter';
-import { getFilterQueries } from '~/helpers/functions';
-import { notFound } from 'next/navigation';
+import { Metadata, ResolvingMetadata } from "next";
+import dynamic from "next/dynamic";
+import React from "react";
+import { fetchListMovieByCategories } from "~/services/movieApi";
+import Container from "@mui/material/Container";
+import MuiPagination from "../../_pages/list/Pagination";
+import Filter from "~/app/_pages/list/Filter";
+import { getFilterQueries } from "~/helpers/functions";
+import { notFound } from "next/navigation";
 const ListCategoryMovie = dynamic(
-  () => import('~/components/UI/ListCategoryMovie'),
+  () => import("~/components/UI/ListCategoryMovie"),
   { ssr: false }
 );
 
@@ -23,7 +23,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   let filterQueries = getFilterQueries(searchParams);
   const { data } = await fetchListMovieByCategories(
-    slug.join('/') + filterQueries
+    slug.join("/") + filterQueries
   );
 
   const previousImage = (await parent).openGraph?.images || [];
@@ -43,7 +43,7 @@ export default async function Page({ params: { slug }, searchParams }: Props) {
   let filterQueries = getFilterQueries(searchParams);
 
   const { data } = await fetchListMovieByCategories(
-    slug.join('/') + filterQueries
+    slug.join("/") + filterQueries
   );
 
   if (!data || data?.items.length === 0) {
@@ -55,11 +55,11 @@ export default async function Page({ params: { slug }, searchParams }: Props) {
       disableGutters
       sx={{
         px: {
-          xs: 8,
+          xs: 4,
           lg: 0,
         },
       }}
-      component='section'
+      component="section"
     >
       <Filter slug={slug} searchParams={searchParams} />
       <ListCategoryMovie

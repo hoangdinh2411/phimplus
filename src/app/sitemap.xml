@@ -17,6 +17,7 @@
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
+ 
   <url>
     <loc>https://www.plusphim.com/xem-phim</loc>
     <lastmod>2023-12-02T15:02:24.021Z</lastmod>
@@ -29,6 +30,35 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
- 
+   <url>
+    <loc>https://www.plusphim.com/about</loc>
+    <lastmod>2023-12-02T15:02:24.021Z</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.5</priority>
+  </url>
+    <url>
+    <loc>https://www.plusphim.com/concact</loc>
+    <lastmod>2023-12-02T15:02:24.021Z</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.5</priority>
+  </url>
+    <url>
+    <loc>https://www.plusphim.com/rules</loc>
+    <lastmod>2023-12-02T15:02:24.021Z</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.5</priority>
+  </url>
+    <url>
+    <loc>https://www.plusphim.com/policy</loc>
+    <lastmod>2023-12-02T15:02:24.021Z</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.5</priority>
+  </url>
+    <url>
+    <loc>https://www.plusphim.com/complain</loc>
+    <lastmod>2023-12-02T15:02:24.021Z</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
 
