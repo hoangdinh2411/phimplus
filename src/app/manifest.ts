@@ -6,7 +6,8 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: APP_CONFIG.NAME,
     short_name: APP_CONFIG.NAME,
-    description: APP_CONFIG.DESCRIPTION,
+    description:
+      'Phim cập nhập liên tục từng ngày, mời các bạn cùng thưởng thức những bộ phim hành động, võ thuật, phim chiếu rạp, các thể loại phim tâm lý, tình cảm cực lôi cuốn và hấp dẫn nhất.',
     categories: [
       'movie',
       'learning english',
@@ -151,23 +152,25 @@ export default function manifest(): MetadataRoute.Manifest {
       'music-video',
     ],
     start_url: '/',
+    id: '/',
     display: 'standalone',
     background_color: color.black,
     theme_color: color.red,
     icons: [
-      {
-        src: '/favicon',
-        sizes: 'any',
-      },
       {
         src: '/favicon-16x16.png',
         sizes: '16x16',
         type: 'image/png',
       },
       {
-        src: 'favicon-32x32',
+        src: '/favicon-32x32.png',
         sizes: '32x32',
         type: 'image/png',
+      },
+      {
+        src: '/favicon.ico',
+        sizes: '48x48',
+        type: 'image/ico',
       },
       {
         src: '/apple-touch-icon.png',
@@ -185,5 +188,6 @@ export default function manifest(): MetadataRoute.Manifest {
         type: 'image/png',
       },
     ],
+    scope: '/',
   };
 }

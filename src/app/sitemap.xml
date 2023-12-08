@@ -1,63 +1,69 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.plusphim.com</loc>
-    <lastmod>2023-12-02T15:02:24.021Z</lastmod>
+    <lastmod>2023-12-08T15:02:24.021Z</lastmod>
     <changefreq>always</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://www.plusphim.com/danh-sach</loc>
-    <lastmod>2023-12-02T15:02:24.021Z</lastmod>
+    <lastmod>2023-12-08T15:02:24.021Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.plusphim.com/the-loai</loc>
-    <lastmod>2023-12-02T15:02:24.021Z</lastmod>
+    <lastmod>2023-12-08T15:02:24.021Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
  
   <url>
     <loc>https://www.plusphim.com/xem-phim</loc>
-    <lastmod>2023-12-02T15:02:24.021Z</lastmod>
+    <lastmod>2023-12-08T15:02:24.021Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.plusphim.com/phim</loc>
-    <lastmod>2023-12-02T15:02:24.021Z</lastmod>
+    <lastmod>2023-12-08T15:02:24.021Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
    <url>
-    <loc>https://www.plusphim.com/about</loc>
-    <lastmod>2023-12-02T15:02:24.021Z</lastmod>
-    <changefreq>never</changefreq>
+    <loc>https://www.plusphim.com/gioi-thieu</loc>
+    <lastmod>2023-12-08T15:02:24.021Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+  </url>
+    <url>
+    <loc>https://www.plusphim.com/khieu-nai-ban-quyen</loc>
+    <lastmod>2023-12-08T15:02:24.021Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
     <url>
-    <loc>https://www.plusphim.com/concact</loc>
-    <lastmod>2023-12-02T15:02:24.021Z</lastmod>
-    <changefreq>never</changefreq>
+    <loc>https://www.plusphim.com/lien-he</loc>
+    <lastmod>2023-12-08T15:02:24.021Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+  </url>
+    <url>
+    <loc>https://www.plusphim.com/tim-kiem</loc>
+    <lastmod>2023-12-08T15:02:24.021Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
     <url>
-    <loc>https://www.plusphim.com/rules</loc>
-    <lastmod>2023-12-02T15:02:24.021Z</lastmod>
-    <changefreq>never</changefreq>
+    <loc>https://www.plusphim.com/dieu-khoan-su-dung</loc>
+    <lastmod>2023-12-08T15:02:24.021Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
     <url>
-    <loc>https://www.plusphim.com/policy</loc>
-    <lastmod>2023-12-02T15:02:24.021Z</lastmod>
-    <changefreq>never</changefreq>
-    <priority>0.5</priority>
-  </url>
-    <url>
-    <loc>https://www.plusphim.com/complain</loc>
-    <lastmod>2023-12-02T15:02:24.021Z</lastmod>
-    <changefreq>never</changefreq>
+    <loc>https://www.plusphim.com/chinh-sach-bao-mat</loc>
+    <lastmod>2023-12-08T15:02:24.021Z</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 </urlset>

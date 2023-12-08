@@ -9,6 +9,7 @@ import TextField from '@mui/material/TextField';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
 import Collapse from '@mui/material/Collapse';
 import { useRouter } from 'next/navigation';
+import { APP_ROUTERS } from '~/helpers/config';
 type Props = {};
 function Navbar({}: Props) {
   const router = useRouter();
@@ -22,7 +23,7 @@ function Navbar({}: Props) {
 
   function search() {
     const value = searchBarRef.current?.value;
-    router.push(`/search?keyword=${value}`);
+    router.push(`${APP_ROUTERS.SEARCH}?keyword=${value}`);
   }
   function handleClickOnSearchIcon() {
     if (searchBar && searchBarRef?.current?.value) {

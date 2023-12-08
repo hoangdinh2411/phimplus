@@ -11,6 +11,7 @@ export default function CustomBreadcrumbs({ name }: { name: string }) {
       separator={<NavigateNextIcon fontSize='small' />}
       sx={{
         textTransform: 'capitalize',
+        mb: 8,
       }}
     >
       <Link underline='hover' href={APP_ROUTERS.HOME}>

@@ -54,8 +54,9 @@ export default function Thumbnail({}: Props) {
             alt={movie.item.name}
             fill
             loading='lazy'
-            sizes='285px 400px'
+            sizes='285px 450px'
             style={{
+              objectFit: 'cover',
               position: 'absolute',
               top: 0,
               left: 0,

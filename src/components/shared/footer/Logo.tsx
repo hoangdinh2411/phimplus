@@ -37,7 +37,7 @@ export default function Logo() {
             component={NextLink}
           >
             {APP_CONFIG.NAME}
-          </Link>
+          </Link>{' '}
           - Trang xem phim Online với giao diện mới được bố trí và thiết kế thân
           thiện với người dùng. Nguồn phim được tổng hợp từ các website lớn với
           đa dạng các đầu phim và thể loại vô cùng phong phú.

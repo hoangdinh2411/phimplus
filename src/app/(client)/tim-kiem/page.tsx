@@ -2,7 +2,7 @@ import { Metadata, ResolvingMetadata } from 'next';
 import React from 'react';
 import { fetchSearchMovie } from '~/services/movieApi';
 import Container from '@mui/material/Container';
-import MuiPagination from '../_pages/list/Pagination';
+import MuiPagination from '~/app/_pages/danh-sach/Pagination';
 import { getFilterQueries } from '~/helpers/functions';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
