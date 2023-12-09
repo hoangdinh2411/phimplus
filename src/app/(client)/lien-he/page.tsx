@@ -4,7 +4,7 @@ import { color } from "~/theme/variables/palette";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import { APP_CONFIG } from "~/helpers/config";
-import CommentsForInFormation from "~/components/shared/commentsPluginsForInfomation";
+import CommentsForInFormation from "~/app/_pages/lien-he";
 
 export default function page() {
   return (
