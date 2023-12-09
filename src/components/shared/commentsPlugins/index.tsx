@@ -5,7 +5,6 @@ import useMovie from '~/hooks/useMovie';
 
 export default function Comments() {
   const { movie } = useMovie();
-
   const href = getDataHref(movie.item.slug);
   return (
     <React.Fragment>

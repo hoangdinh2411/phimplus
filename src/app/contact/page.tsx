@@ -4,6 +4,7 @@ import { color } from "~/theme/variables/palette";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import { EMAIL_PLUS_PHIM, PAGE_PLUS_PHIM } from "~/helpers/config";
+import CommentsForInFormation from "~/components/shared/commentsPluginsForInfomation";
 
 export default function page() {
   return (
@@ -43,6 +44,7 @@ export default function page() {
           PlusPhim
         </Link>
       </Typography>
+      <CommentsForInFormation />
     </Container>
   );
 }
