@@ -1,11 +1,11 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import Detail from '../../_pages/phim/Detail/Detail';
+import Detail from '~/app/_pages/phim/Detail/Detail';
 // import Trailer from "../../_pages/phim/Trailer/Trailer";
-const Trailer = dynamic(() => import('../../_pages/phim/Trailer/Trailer'), {
+const Trailer = dynamic(() => import('~/app/_pages/phim/Trailer/Trailer'), {
   ssr: false,
 });
-import Review from '../../../components/shared/Review/Review';
+import Review from '~/components/shared/Review/Review';
 import MovieContextProvider from '~/provider/MovieContextProvider';
 import { notFound } from 'next/navigation';
 import { getMovieBySlug } from '~/services/movieApi';

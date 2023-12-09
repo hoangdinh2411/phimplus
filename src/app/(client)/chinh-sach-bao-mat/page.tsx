@@ -1,28 +1,28 @@
-import React from "react";
-import Container from "@mui/material/Container";
-import { color } from "~/theme/variables/palette";
-import Typography from "@mui/material/Typography";
+import React from 'react';
+import Container from '@mui/material/Container';
+import { color } from '~/theme/variables/palette';
+import Typography from '@mui/material/Typography';
 
-export default function index() {
+export default function policyPage() {
   return (
     <Container
-      maxWidth="lg"
+      maxWidth='lg'
       sx={{
         my: 16,
         p: 16,
         backgroundColor: color.black,
-        borderRadius: "10px",
-        fontSize: "12px",
-        color: "text.primary",
+        borderRadius: '10px',
+        fontSize: '12px',
+        color: 'text.primary',
       }}
     >
-      <Typography variant="h3" mb={8}>
+      <Typography variant='h3' mb={8} component='h3'>
         Chính Sách Riêng Tư
       </Typography>
-      <Typography variant="h5" mb={8} color={color.red}>
+      <Typography variant='h5' component='article' mb={8} color={color.red}>
         Cookies
       </Typography>
-      <Typography variant="body1" mb={8} lineHeight={2}>
+      <Typography variant='body1' component='article' mb={8} lineHeight={2}>
         Cũng như nhiều website khác, chúng tôi thiết lập và sử dụng cookie để
         tìm hiểu thêm về cách bạn tương tác với nội dung của chúng tôi và giúp
         chúng tôi cải thiện trải nghiệm của bạn khi ghé thăm website của chúng
@@ -34,19 +34,19 @@ export default function index() {
         thường sử dụng các đoạn mã riêng để theo dõi số lượt truy cập của bạn
         đến website của chúng tôi.
       </Typography>
-      <Typography variant="h5" mb={8} color={color.red}>
+      <Typography variant='h5' component='article' mb={8} color={color.red}>
         Thay đổi điều khoản
       </Typography>
-      <Typography variant="body1" mb={8} lineHeight={2}>
+      <Typography variant='body1' component='article' mb={8} lineHeight={2}>
         Chúng tôi có thể thay đổi các điều khoản của bản Chính sách bảo vệ riêng
         tư này cho phù hợp với điều kiện thực tế. Chúng tôi sẽ thông báo về
         những thay đổi lớn bằng cách đặt thông báo trên site của chúng tôi và
         được đặt trong thiết lập người dùng của bạn.
       </Typography>
-      <Typography variant="h5" mb={8} color={color.red}>
+      <Typography variant='h5' component='article' mb={8} color={color.red}>
         Từ chối bảo đảm
       </Typography>
-      <Typography variant="body1" mb={8} lineHeight={2}>
+      <Typography variant='body1' component='article' mb={8} lineHeight={2}>
         Mặc dù Chính sách bảo vệ riêng tư đặt ra những tiêu chuẩn về Dữ liệu và
         chúng tôi luôn cố gắng hết mình để đáp ứng, chúng tôi không bị buộc phải
         bảo đảm những tiêu chuẩn đó. Có thể có những nhân tố vượt ra ngoài tầm
@@ -54,10 +54,10 @@ export default function index() {
         chúng tôi không chịu trách nhiệm bảo đảm Dữ liệu luôn được duy trì ở
         tình trạng hoàn hảo hoặc không bị tiết lộ.
       </Typography>
-      <Typography variant="h5" mb={8} color={color.red}>
+      <Typography variant='h5' component='article' mb={8} color={color.red}>
         Sự đồng ý của bạn
       </Typography>
-      <Typography variant="body1" mb={8} lineHeight={2}>
+      <Typography variant='body1' component='article' mb={8} lineHeight={2}>
         Khi sử dụng dịch vụ của PlusPhim, bạn mặc nhiên chấp nhận điều khoản
         trong Chính sách bảo vệ riêng tư này
       </Typography>

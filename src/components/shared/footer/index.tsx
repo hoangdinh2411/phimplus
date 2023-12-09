@@ -22,7 +22,7 @@ function Footer() {
           mb: 30,
           mx: 0,
           px: {
-            xs: 8,
+            xs: 4,
             lg: 0,
           },
         }}
@@ -39,7 +39,7 @@ function Footer() {
               lg: 'block',
             },
             px: {
-              xs: 8,
+              xs: 4,
               lg: 0,
             },
           }}
@@ -54,7 +54,7 @@ function Footer() {
         lineHeight='32px'
         color='textPrimary'
       >
-        © PhimPlus.com - 2023
+        COPYRIGHT © PhimPlus.com - 2023
       </Typography>
       <Script src='https://www.googletagmanager.com/gtag/js?id=G-CL984922DN'></Script>
       <Script id='google-analytic'>
