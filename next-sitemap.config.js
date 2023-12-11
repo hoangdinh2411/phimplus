@@ -1,7 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 
 module.exports = {
-  siteUrl: 'http://localhost:3000',
+  siteUrl: process.env.NEXT_PUBLIC_DOMAIN || 'https://www.plusphim.com/',
   generateRobotsTxt: true,
   sitemapSize: 7000,
 
@@ -16,6 +16,6 @@ module.exports = {
         disallow: ['/admin'],
       },
     ],
-    additionalSitemaps: ['http://localhost:3000/server-sitemap.xml'],
+    additionalSitemaps: ['https://www.plusphim.com/server-sitemap.xml'],
   },
 };
