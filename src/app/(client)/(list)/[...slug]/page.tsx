@@ -3,8 +3,8 @@ import dynamic from 'next/dynamic';
 import React from 'react';
 import { fetchListMovieByCategories } from '~/services/movieApi';
 import Container from '@mui/material/Container';
-import MuiPagination from '../../_pages/list/Pagination';
-import Filter from '~/app/_pages/list/Filter';
+import MuiPagination from '~/app/_pages/danh-sach/Pagination';
+import Filter from '~/app/_pages/danh-sach/Filter';
 import { getFilterQueries } from '~/helpers/functions';
 import { notFound } from 'next/navigation';
 const ListCategoryMovie = dynamic(
@@ -55,7 +55,7 @@ export default async function Page({ params: { slug }, searchParams }: Props) {
       disableGutters
       sx={{
         px: {
-          xs: 8,
+          xs: 4,
           lg: 0,
         },
       }}

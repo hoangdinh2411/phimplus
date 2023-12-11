@@ -66,7 +66,13 @@ export default function ListMovie({
       component="section"
     >
       <Title seeMore={seeMore} title={title} href={href} />
-      <Grid spacing={8} container my={4} ml={-8}>
+      <Grid
+        columnSpacing={{ xs: 4, lg: 8 }}
+        rowSpacing={{ xs: 4, lg: 8 }}
+        container
+        my={4}
+        ml={-8}
+      >
         {data && shouldFetchData ? (
           data?.map((item: any, index: number) => {
             if (limit && index >= limit) return null;
