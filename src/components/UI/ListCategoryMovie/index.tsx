@@ -30,7 +30,13 @@ export default function ListCategoryMovie({
       component="section"
     >
       <Title seeMore={seeMore} title={title} href={href} />
-      <Grid spacing={8} container my={4} ml={-8}>
+      <Grid
+        columnSpacing={{ xs: 4, lg: 8 }}
+        rowSpacing={{ xs: 4, lg: 8 }}
+        container
+        my={4}
+        ml={-8}
+      >
         {listMovie &&
           listMovie.map((item, index) => {
             if (limit && index >= limit) return null;

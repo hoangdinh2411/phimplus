@@ -27,15 +27,12 @@ export default function MovieSlide({
     <>
       {title ? <Title seeMore={seeMore} title={title} href={href} /> : null}
       <Container
-        component='div'
+        component='article'
         maxWidth={false}
         disableGutters
         sx={{
-          py: 20,
-          px: {
-            xs: 4,
-            lg: 0,
-          },
+          py: 0,
+          px: 0,
           '.swiper-button-next , .swiper-button-prev': {
             ':hover': {
               backgroundColor: 'background.paper',

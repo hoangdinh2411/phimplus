@@ -3,6 +3,9 @@ export const APP_CONFIG = {
   DESCRIPTION:
     'PlusPhim - Trang xem phim Online với giao diện mới được bố trí và thiết kế thân thiện với người dùng. Nguồn phim được tổng hợp từ các website lớn với đa dạng các đầu phim và thể loại vô cùng phong phú. Phim cập nhập liên tục từng ngày, mời các bạn cùng thưởng thức những bộ phim hành động, võ thuật, phim chiếu rạp, các thể loại phim tâm lý, tình cảm cực lôi cuốn và hấp dẫn nhất.',
   DOMAIN: process.env.NEXT_PUBLIC_DOMAIN,
+  PAGE_PLUS_PHIM: 'https://www.facebook.com/profile.php?id=61554302664546',
+  EMAIL_PLUS_PHIM: 'plusphim2023@gmail.com',
+  TELEGRAM: 'https://t.me/+ynAmlaE4MAFiODI8',
 };
 
 export const APP_ROUTERS = {
@@ -16,6 +19,12 @@ export const APP_ROUTERS = {
   CATEGORY: '/the-loai/',
   MOVIE: '/phim/',
   WATCH: '/xem-phim/',
+  SEARCH: '/tim-kiem/',
+  CONTACT: '/lien-he/',
+  ABOUT: '/gioi-thieu/',
+  RULES: '/dieu-khoan-su-dung/',
+  POLICY: '/chinh-sach-bao-mat/',
+  COPYRIGHT_CLAIM: '/khieu-nai-ban-quyen/',
 };
 
 export const MENU_BAR = [
@@ -57,11 +66,11 @@ export const MENU_BAR = [
 ];
 
 export const MENU_INFORMATION = [
-  { id: 1, name: 'Giới Thiệu', slug: '' },
-  { id: 2, name: 'Liên Hệ Chúng Tôi', slug: '' },
-  { id: 3, name: 'Điều Khoản Sử Dụng', slug: '' },
-  { id: 4, name: 'Chính Sách Riêng Tư', slug: '' },
-  { id: 5, name: 'Kiếu Nại Bản Quyền', slug: '' },
+  { id: 1, name: 'Giới Thiệu', slug: APP_ROUTERS.ABOUT },
+  { id: 2, name: 'Liên Hệ Quảng Cáo', slug: APP_ROUTERS.CONTACT },
+  { id: 3, name: 'Điều Khoản Sử Dụng', slug: APP_ROUTERS.RULES },
+  { id: 4, name: 'Chính Sách Bảo Mật', slug: APP_ROUTERS.POLICY },
+  { id: 5, name: 'Khiếu Nại Bản Quyền', slug: APP_ROUTERS.COPYRIGHT_CLAIM },
 ];
 
 export const MENU_LIST = [
@@ -113,6 +122,3 @@ export const GALLERY = {
     slug: '/danh-sach/hoat-hinh',
   },
 };
-
-export const PAGE_PLUS_PHIM =
-  'https://www.facebook.com/profile.php?id=61554302664546';

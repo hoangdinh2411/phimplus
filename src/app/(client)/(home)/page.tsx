@@ -12,7 +12,7 @@ import {
 import Box from '@mui/material/Box';
 import AdsSlideSkeleton from '~/components/UI/Skeleton/AdsSlideSkeleton';
 import { IListMovieWithSeo } from '~/types/movie';
-const AdsSlide = dynamic(() => import('./_pages/home/AdsSlide/AdsSlide'), {
+const AdsSlide = dynamic(() => import('~/app/_pages/home/AdsSlide/AdsSlide'), {
   loading: () => <AdsSlideSkeleton />,
   ssr: false,
 });
@@ -56,7 +56,7 @@ export default async function Home() {
         sx={{
           py: 10,
           px: {
-            xs: 4,
+            xs: 2,
             lg: 0,
           },
         }}

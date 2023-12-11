@@ -1,16 +1,16 @@
-import Container from "@mui/material/Container";
-import { Metadata, ResolvingMetadata } from "next";
-import React from "react";
-import Grid from "@mui/material/Grid";
-import TopList from "~/app/_pages/xem-phim/TopList";
-import { fetchListNewMovie, getMovieBySlug } from "~/services/movieApi";
+import Container from '@mui/material/Container';
+import { Metadata, ResolvingMetadata } from 'next';
+import React from 'react';
+import Grid from '@mui/material/Grid';
+import TopList from '~/app/_pages/xem-phim/TopList';
+import { fetchListNewMovie, getMovieBySlug } from '~/services/movieApi';
 
-import { notFound } from "next/navigation";
-import { handleError } from "~/services/request";
-import Screen from "~/app/_pages/xem-phim/Screen";
-import CustomBreadcrumbs from "~/app/_pages/xem-phim/CustomBreadcrumbs";
-import MovieContextProvider from "~/provider/MovieContextProvider";
-import Review from "~/components/shared/Review/Review";
+import { notFound } from 'next/navigation';
+import { handleError } from '~/services/request';
+import Screen from '~/app/_pages/xem-phim/Screen';
+import CustomBreadcrumbs from '~/app/_pages/xem-phim/CustomBreadcrumbs';
+import MovieContextProvider from '~/provider/MovieContextProvider';
+import Review from '~/components/shared/Review/Review';
 
 type Props = {
   params: { slug: string };
@@ -49,28 +49,28 @@ export default async function WatchMoviePage({ params: { slug } }: Props) {
   return (
     <MovieContextProvider movie={movie?.data}>
       <Container
-        component="main"
+        component='main'
         maxWidth={false}
         disableGutters
         sx={{
           py: 30,
           px: {
-            xs: 8,
+            xs: 4,
             lg: 0,
           },
         }}
       >
         <Grid container spacing={0} columnSpacing={16}>
-          <Grid item xs={12} mb={8}>
+          <Grid item xs={12}>
             <CustomBreadcrumbs name={movie.data.item.name} />
           </Grid>
           <Grid item xs={12} md={9}>
             <Screen movie={movie.data.item} />
           </Grid>
-          <Grid item md={3} display={{ xs: "none", md: "block" }}>
+          <Grid item md={3} display={{ xs: 'none', md: 'block' }}>
             <TopList items={newMoviesAtCurrentYear.items.splice(0, 8)} />
           </Grid>
-          <Grid item md={9} xs={12}>
+          <Grid item xs={12}>
             <Review />
           </Grid>
         </Grid>

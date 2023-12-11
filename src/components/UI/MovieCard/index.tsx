@@ -25,7 +25,8 @@ function MovieCard({ slug, thumbnail, name, view, tagTitle }: Props) {
         width: '100%',
         height: {
           md: 400,
-          xs: 350,
+          sm: 300,
+          xs: 250,
         },
         borderRadius: {
           lg: 6,
@@ -82,7 +83,7 @@ function MovieCard({ slug, thumbnail, name, view, tagTitle }: Props) {
             loading='lazy'
             blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYA'
             placeholder='blur'
-            sizes='270px'
+            sizes='(min-width:0) 250px, (min-width:600px) 300px, (min-width:960px) 400px, 100vw'
             style={{
               objectFit: 'cover',
               top: 0,

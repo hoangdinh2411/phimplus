@@ -15,7 +15,7 @@ export const fetchListNewMovie = async () => {
 
 export const getMovieBySlug = async (slug: string) => {
   return await request<IMovieWithSeo>('/v1/api/phim/' + slug, {
-    next: { revalidate: 3600 * 24 },
+    caches: 'force-cache',
   });
 };
 

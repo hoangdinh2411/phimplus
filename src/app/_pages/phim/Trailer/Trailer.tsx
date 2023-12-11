@@ -26,6 +26,6 @@ export default function Trailer({ src }: Props) {
   }
   return (
     // Only loads the YouTube player
-    <ReactPlayer url={src} height={650} width="100%" />
+    <ReactPlayer url={src} height="500px" width="100%" />
   );
 }

@@ -45,7 +45,13 @@ export default function TopList({ items }: Props) {
             borderColor: 'divider',
           }}
         >
-          <Typography variant='body1' component='p' fontWeight='bolder'>
+          <Typography
+            variant='body1'
+            component='p'
+            fontWeight='bolder'
+            color='error'
+            textTransform={'uppercase'}
+          >
             Top phim
           </Typography>
         </Box>

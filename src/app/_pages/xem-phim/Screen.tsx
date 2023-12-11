@@ -65,8 +65,23 @@ export default function Screen({ movie }: Props) {
   return (
     <>
       <Player src={getEpisodeMovieUrl()} />
-      <Box component='section' my={8} borderRadius={8} overflow='hidden'>
-        <List component='nav' aria-label='main mailbox folders'>
+      <Box
+        component='section'
+        my={8}
+        borderRadius={8}
+        minHeight={300}
+        pb={{
+          xs: 8,
+          md: 0,
+        }}
+      >
+        <List
+          component='nav'
+          aria-label='main mailbox folders'
+          sx={{
+            mb: 8,
+          }}
+        >
           {getEpisodeMovieUrl() &&
             movie?.episodes &&
             movie?.episodes.map((server, serverIndex) => {
