@@ -3,7 +3,7 @@ env:
   variables:
     NEXT_PUBLIC_LANGUAGES: 'en_US'
     NEXT_PUBLIC_FACEBOOK_APP_ID: '880737893461973'
-    NEXT_PUBLIC_DOMAIN: 'https://www.plusphim.com/'
+    NEXT_PUBLIC_DOMAIN: 'https://www.plusphim.com'
     NEXT_PUBLIC_OPHIM_API: 'https://ophim1.com/'
 
 frontend:
