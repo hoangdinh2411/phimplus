@@ -53,13 +53,11 @@ export default function Thumbnail({}: Props) {
             src={'https://img.ophim9.cc/uploads/movies/' + movie.item.thumb_url}
             alt={movie.item.name}
             fill
+            quality={75}
             loading='lazy'
             sizes='285px 450px'
             style={{
               objectFit: 'cover',
-              position: 'absolute',
-              top: 0,
-              left: 0,
             }}
           />
           <Tag

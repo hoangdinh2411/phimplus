@@ -4,6 +4,10 @@ import Container from '@mui/material/Container';
 import { color } from '~/theme/variables/palette';
 import Link from 'next/link';
 import { APP_ROUTERS } from '~/helpers/config';
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: 'Giới Thiệu về PlusPhim',
+};
 
 export default function page() {
   return (
@@ -39,7 +43,7 @@ export default function page() {
             title={APP_ROUTERS.HOME}
           >
             <strong>PlusPhim</strong>
-          </Link>
+          </Link>{' '}
           là một website xem phim trực tuyến hoàn toàn miễn phí, nơi bạn có thể
           khám phá và tận hưởng hàng ngàn bộ phim hấp dẫn từ nhiều thể loại khác
           nhau. Chúng tôi tập trung vào việc mang đến cho bạn những trải nghiệm
