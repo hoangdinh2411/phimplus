@@ -2,7 +2,10 @@ import React from 'react';
 import Container from '@mui/material/Container';
 import { color } from '~/theme/variables/palette';
 import Typography from '@mui/material/Typography';
-
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: 'Điều Khoản Sử Dụng',
+};
 export default function page() {
   return (
     <Container

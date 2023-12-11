@@ -2,6 +2,10 @@ import React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { color } from '~/theme/variables/palette';
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: 'Khiếu Nại Bản Quyền',
+};
 
 export default function page() {
   return (
