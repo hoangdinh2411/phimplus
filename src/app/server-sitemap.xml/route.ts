@@ -1,10 +1,11 @@
 import { getServerSideSitemap } from 'next-sitemap';
+import { APP_CONFIG } from '~/helpers/config';
 import { fetchListCategory, fetchListCountries } from '~/services/appApi';
 
 export async function GET(request: Request) {
   const categories = await fetchListCategory();
   const countries = await fetchListCountries();
-  const domain = 'http://localhost:3000';
+  const domain = APP_CONFIG.DOMAIN;
   const siteMapForCategories: any = categories.map((category) => ({
     loc: domain + category.slug,
     lastmod: new Date().toISOString(),
@@ -22,7 +23,7 @@ export async function GET(request: Request) {
     {
       loc: `${domain}`,
       lastmod: new Date().toISOString(),
-      changefreq: 'daily',
+      changefreq: 'hourly',
       priority: 1,
     },
     {
