@@ -7,9 +7,9 @@ import Box from '@mui/material/Box';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import Button from '@mui/material/Button';
 import useMovie from '~/hooks/useMovie';
-import Tag from '~/components/UI/Tag';
 import Link from 'next/link';
 import { APP_ROUTERS } from '~/helpers/config';
+import Tag from '~/app/components/UI/Tag';
 type Props = {};
 
 export default function Thumbnail({}: Props) {
@@ -54,7 +54,6 @@ export default function Thumbnail({}: Props) {
             alt={movie.item.name}
             fill
             quality={75}
-            loading='lazy'
             sizes='285px 450px'
             style={{
               objectFit: 'cover',

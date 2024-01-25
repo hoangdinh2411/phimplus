@@ -54,6 +54,7 @@ function MenuBar({}: Props) {
         >
           <Link
             href={page.path}
+            prefetch={false}
             onClick={
               page.path !== '' ? () => {} : (e) => showSubMenu(e, page.key)
             }
@@ -107,7 +108,11 @@ function MenuBar({}: Props) {
               <Grid container spacing={4} maxWidth={600} padding={8}>
                 {subMenu.map((item: Item) => (
                   <Grid key={item.slug} item md={3} marginY={4}>
-                    <Link href={item.slug} onClick={closeSubMenu}>
+                    <Link
+                      prefetch={false}
+                      href={item.slug}
+                      onClick={closeSubMenu}
+                    >
                       <Typography
                         component='span'
                         variant='body1'

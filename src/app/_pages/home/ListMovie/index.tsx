@@ -1,12 +1,12 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import Grid from "@mui/material/Grid";
-import MovieCard from "~/components/UI/MovieCard";
-import { BoxProps } from "@mui/material";
-import Box from "@mui/material/Box";
-import Title from "./Title";
-import ListMovieSkeleton from "~/components/UI/Skeleton/ListMovieSkeleton";
-import { IListMovieWithSeo } from "~/types/movie";
+'use client';
+import React, { useEffect, useState } from 'react';
+import Grid from '@mui/material/Grid';
+import { BoxProps } from '@mui/material';
+import Box from '@mui/material/Box';
+import Title from './Title';
+import { IListMovieWithSeo } from '~/types/movie';
+import MovieCard from '~/app/components/UI/MovieCard';
+import ListMovieSkeleton from '~/app/components/UI/Skeleton/ListMovieSkeleton';
 interface Props extends BoxProps {
   listMovie: Promise<IListMovieWithSeo>;
   title?: string;
@@ -34,7 +34,7 @@ export default function ListMovie({
           const response = await listMovie;
           setData(response.items);
         } catch (error) {
-          console.error("Error fetching data:", error);
+          console.error('Error fetching data:', error);
         }
       }
     };
@@ -49,10 +49,10 @@ export default function ListMovie({
     }
   };
   useEffect(() => {
-    window.addEventListener("scroll", handleYScroll);
+    window.addEventListener('scroll', handleYScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleYScroll);
+      window.removeEventListener('scroll', handleYScroll);
     };
   });
 
@@ -63,7 +63,7 @@ export default function ListMovie({
         lg: 20,
       }}
       {...rest}
-      component="section"
+      component='section'
     >
       <Title seeMore={seeMore} title={title} href={href} />
       <Grid

@@ -5,11 +5,11 @@ import { Navigation } from 'swiper/modules';
 import Container from '@mui/material/Container';
 import { IMovieDetail } from '~/types/movie';
 import Title from '~/app/_pages/home/ListMovie/Title';
-import MovieCard from '~/components/UI/MovieCard';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import MovieCard from '../../UI/MovieCard';
 interface Props {
   items: IMovieDetail[];
   title?: string;

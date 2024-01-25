@@ -10,7 +10,8 @@ import { handleError } from '~/services/request';
 import Screen from '~/app/_pages/xem-phim/Screen';
 import CustomBreadcrumbs from '~/app/_pages/xem-phim/CustomBreadcrumbs';
 import MovieContextProvider from '~/provider/MovieContextProvider';
-import Review from '~/components/shared/Review/Review';
+import Review from '~/app/components/shared/Review/Review';
+import AdsSlideSkeleton from '~/app/components/UI/Skeleton/AdsSlideSkeleton';
 
 type Props = {
   params: { slug: string };
@@ -68,7 +69,9 @@ export default async function WatchMoviePage({ params: { slug } }: Props) {
             <Screen movie={movie.data.item} />
           </Grid>
           <Grid item md={3} display={{ xs: 'none', md: 'block' }}>
-            <TopList items={newMoviesAtCurrentYear.items.splice(0, 8)} />
+            <React.Suspense fallback={<AdsSlideSkeleton />}>
+              <TopList items={newMoviesAtCurrentYear.items.splice(0, 8)} />
+            </React.Suspense>
           </Grid>
           <Grid item xs={12}>
             <Review />

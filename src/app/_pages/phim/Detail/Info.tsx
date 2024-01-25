@@ -9,7 +9,7 @@ import useMovie from '~/hooks/useMovie';
 import { APP_ROUTERS } from '~/helpers/config';
 import React from 'react';
 import Link from 'next/link';
-import LikeAndSharePlugin from '~/components/shared/likeAndSharePlugin.tsx';
+import LikeAndSharePlugin from '~/app/components/shared/likeAndSharePlugin.tsx';
 export default function Info() {
   const { movie } = useMovie();
 
@@ -144,7 +144,7 @@ export default function Info() {
             <Link
               key={item.id}
               href={APP_ROUTERS.CATEGORY + item.slug}
-              prefetch={false}
+              prefetch={true}
             >
               <Typography
                 variant='caption'
@@ -195,7 +195,7 @@ export default function Info() {
           },
         }}
       >
-        <Link href={APP_ROUTERS.WATCH + movie.item.slug}>
+        <Link href={APP_ROUTERS.WATCH + movie.item.slug} prefetch={false}>
           <Button variant='contained' size='large'>
             <PlayArrowIcon />
             Xem phim{' '}
