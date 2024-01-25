@@ -1,11 +1,12 @@
+'use client';
 import React from 'react';
 import MovieContextProvider from '~/provider/MovieContextProvider';
 import { IMovieWithSeo } from '~/types/movie';
 import Detail from './Detail/Detail';
 import Trailer from './Trailer/Trailer';
-import Review from '~/components/shared/Review/Review';
 import { IResponse } from '~/services/request';
 import { notFound } from 'next/navigation';
+import Review from '~/app/components/shared/Review/Review';
 
 type Props = {
   moviePromise: Promise<IResponse<IMovieWithSeo>>;

@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -8,7 +9,7 @@ import Button from '@mui/material/Button';
 import Link from 'next/link';
 import { APP_CONFIG } from '~/helpers/config';
 
-const Comments = dynamic(() => import('~/components/shared/commentsPlugins'));
+const Comments = dynamic(() => import('../commentsPlugins'));
 type Props = {};
 
 export default function Review({}: Props) {

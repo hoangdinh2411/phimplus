@@ -5,10 +5,13 @@ import { getMovieBySlug } from '~/services/movieApi';
 import type { Metadata, ResolvingMetadata } from 'next';
 import Container from '@mui/material/Container';
 
-import Content from '~/app/_pages/phim/Content';
 import { IMovieWithSeo } from '~/types/movie';
 import { IResponse } from '~/services/request';
+import dynamic from 'next/dynamic';
 
+const Content = dynamic(() => import('~/app/_pages/phim/Content'), {
+  ssr: false,
+});
 type Props = {
   params: { slug: string };
 };

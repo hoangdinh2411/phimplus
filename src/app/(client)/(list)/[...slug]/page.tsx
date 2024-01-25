@@ -7,8 +7,9 @@ import MuiPagination from '~/app/_pages/danh-sach/Pagination';
 import Filter from '~/app/_pages/danh-sach/Filter';
 import { getFilterQueries } from '~/helpers/functions';
 import { notFound } from 'next/navigation';
+import AdsSlideSkeleton from '~/app/components/UI/Skeleton/AdsSlideSkeleton';
 const ListCategoryMovie = dynamic(
-  () => import('~/components/UI/ListCategoryMovie'),
+  () => import('../../../components/UI/ListCategoryMovie'),
   { ssr: false }
 );
 
@@ -62,10 +63,12 @@ export default async function Page({ params: { slug }, searchParams }: Props) {
       component='section'
     >
       <Filter slug={slug} searchParams={searchParams} />
-      <ListCategoryMovie
-        listMovie={data.items ? data.items : []}
-        seeMore={false}
-      />
+      <React.Suspense fallback={<AdsSlideSkeleton />}>
+        <ListCategoryMovie
+          listMovie={data.items ? data.items : []}
+          seeMore={false}
+        />
+      </React.Suspense>
       <MuiPagination
         filterQueries={filterQueries}
         totalItem={data.params?.pagination.totalItems}

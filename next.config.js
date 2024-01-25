@@ -8,6 +8,11 @@ const nextConfig = {
         port: '',
         pathname: '/uploads/movies/**',
       },
+      {
+        protocol: 'https',
+        hostname: ' imgyn.imageshh.com',
+        port: '',
+      },
     ],
     disableStaticImages: true,
     dangerouslyAllowSVG: true,

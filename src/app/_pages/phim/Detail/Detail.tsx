@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid';
 import Info from './Info';
 import dynamic from 'next/dynamic';
 import Thumbnail from '../Thumbnail/Thumbnail';
-import TextSkeleton from '~/components/UI/Skeleton/TextSkeleton';
+import TextSkeleton from '~/app/components/UI/Skeleton/TextSkeleton';
 const AboutMovie = dynamic(() => import('./AboutMovie'), {
   loading: () => <TextSkeleton />,
   ssr: false,

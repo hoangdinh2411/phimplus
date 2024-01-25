@@ -1,10 +1,10 @@
-import React from "react";
-import Grid from "@mui/material/Grid";
-import MovieCard from "~/components/UI/MovieCard";
-import { IMovieDetail } from "~/types/movie";
-import { BoxProps } from "@mui/material";
-import Box from "@mui/material/Box";
-import Title from "~/app/_pages/home/ListMovie/Title";
+import React from 'react';
+import Grid from '@mui/material/Grid';
+import { IMovieDetail } from '~/types/movie';
+import { BoxProps } from '@mui/material';
+import Box from '@mui/material/Box';
+import Title from '~/app/_pages/home/ListMovie/Title';
+import MovieCard from '../MovieCard';
 interface Props extends BoxProps {
   listMovie: IMovieDetail[];
   title?: string;
@@ -27,7 +27,7 @@ export default function ListCategoryMovie({
         lg: 20,
       }}
       {...rest}
-      component="section"
+      component='section'
     >
       <Title seeMore={seeMore} title={title} href={href} />
       <Grid

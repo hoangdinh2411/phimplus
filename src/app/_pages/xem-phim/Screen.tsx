@@ -1,12 +1,12 @@
 'use client';
 import React from 'react';
-import Player from '~/components/UI/Player';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import { IMovieDetail } from '~/types/movie';
 import Typography from '@mui/material/Typography';
+import Player from '~/app/components/UI/Player';
 type Props = {
   movie: IMovieDetail;
 };

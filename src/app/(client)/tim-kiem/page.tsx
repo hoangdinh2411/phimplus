@@ -7,9 +7,9 @@ import { getFilterQueries } from '~/helpers/functions';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import MovieCard from '~/components/UI/MovieCard';
-import ListMovieSkeleton from '~/components/UI/Skeleton/ListMovieSkeleton';
 import MoviesNotFound from './MoviesNotFound';
+import MovieCard from '~/app/components/UI/MovieCard';
+import ListMovieSkeleton from '~/app/components/UI/Skeleton/ListMovieSkeleton';
 interface Props {
   searchParams: { [key: string]: string | string[] | undefined };
 }

@@ -10,14 +10,14 @@ import {
   fetchListSingleMovieByGallery,
 } from '~/services/movieApi';
 import Box from '@mui/material/Box';
-import AdsSlideSkeleton from '~/components/UI/Skeleton/AdsSlideSkeleton';
 import { IListMovieWithSeo } from '~/types/movie';
+import AdsSlideSkeleton from '~/app/components/UI/Skeleton/AdsSlideSkeleton';
 const AdsSlide = dynamic(() => import('~/app/_pages/home/AdsSlide/AdsSlide'), {
   loading: () => <AdsSlideSkeleton />,
   ssr: false,
 });
 const MovieSlide = dynamic(
-  () => import('~/components/shared/slide/MovieSlide'),
+  () => import('../../components/shared/slide/MovieSlide'),
   { ssr: false }
 );
 const ListMovie = dynamic(() => import('~/app/_pages/home/ListMovie'), {
@@ -61,27 +61,33 @@ export default async function Home() {
           },
         }}
       >
-        <ListMovie
-          limit={8}
-          listMovie={singleMovie}
-          title={GALLERY.single.name}
-          href={GALLERY.single.slug}
-          YPosition={600}
-        />
-        <ListMovie
-          limit={8}
-          listMovie={seriesMovie}
-          title={GALLERY.series.name}
-          href={GALLERY.series.slug}
-          YPosition={1600}
-        />
-        <ListMovie
-          limit={8}
-          listMovie={cartoonMovie}
-          title={GALLERY.cartoon.name}
-          href={GALLERY.cartoon.slug}
-          YPosition={2500}
-        />
+        <React.Suspense fallback={<AdsSlideSkeleton />}>
+          <ListMovie
+            limit={8}
+            listMovie={singleMovie}
+            title={GALLERY.single.name}
+            href={GALLERY.single.slug}
+            YPosition={600}
+          />
+        </React.Suspense>
+        <React.Suspense fallback={<AdsSlideSkeleton />}>
+          <ListMovie
+            limit={8}
+            listMovie={seriesMovie}
+            title={GALLERY.series.name}
+            href={GALLERY.series.slug}
+            YPosition={1600}
+          />
+        </React.Suspense>
+        <React.Suspense fallback={<AdsSlideSkeleton />}>
+          <ListMovie
+            limit={8}
+            listMovie={cartoonMovie}
+            title={GALLERY.cartoon.name}
+            href={GALLERY.cartoon.slug}
+            YPosition={2500}
+          />
+        </React.Suspense>
       </Container>
     </Box>
   );

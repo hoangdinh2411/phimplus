@@ -6,12 +6,12 @@ import Typography from '@mui/material/Typography';
 import StarOutlinedIcon from '@mui/icons-material/StarOutlined';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { color } from '~/theme/variables/palette';
-import Tag from '~/components/UI/Tag';
 import { IMovieDetail } from '~/types/movie';
 import { joinToStringFromArray } from '~/helpers/functions';
 import Image from 'next/image';
 import { APP_ROUTERS } from '~/helpers/config';
 import Link from 'next/link';
+import Tag from '~/app/components/UI/Tag';
 
 interface Props {
   item: IMovieDetail;
