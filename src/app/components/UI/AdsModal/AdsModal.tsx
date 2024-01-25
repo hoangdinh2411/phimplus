@@ -27,6 +27,7 @@ export default function AdsModal({ open, onClose }: Props) {
         href='https://www.i9bet300.com/Register?a=1284708'
         target='_blank'
         onClick={onClose}
+        title='Đăng ký tài khoản i9bet300'
         style={{
           position: 'absolute',
           top: 0,
