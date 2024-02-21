@@ -24,7 +24,7 @@ export default function AdsModal({ open, onClose }: Props) {
       }}
     >
       <Link
-        href='https://www.i9bet300.com/Register?a=1284708'
+        href='https://www.88i9bet.com/Register?a=1284708'
         target='_blank'
         onClick={onClose}
         title='Đăng ký tài khoản i9bet300'
@@ -39,7 +39,7 @@ export default function AdsModal({ open, onClose }: Props) {
         }}
       />
       <Link
-        href='https://www.i9bet300.com/Register?a=1284708'
+        href='https://www.88i9bet.com/Register?a=1284708'
         onClick={onClose}
         target='_blank'
         style={{
