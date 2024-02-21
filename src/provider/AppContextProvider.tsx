@@ -5,6 +5,7 @@ import { fetchListCategory, fetchListCountries } from '~/services/appApi';
 import { Item } from '~/types/app';
 import Container from '@mui/system/Container';
 import Link from 'next/link';
+import { ADS } from '~/helpers/config';
 export type InitialStateAppContextType = {
   categories: Item[];
   countries: Item[];
@@ -59,7 +60,7 @@ export default function AppContextProvider({
         }}
       >
         <Link
-          href='https://www.i9bet300.com/Register?a=1284708'
+          href={ADS.URL}
           style={{
             height: '90px',
             width: '980px',

@@ -8,6 +8,10 @@ export const APP_CONFIG = {
   TELEGRAM: 'https://t.me/+ynAmlaE4MAFiODI8',
 };
 
+export const ADS={
+  URL:'https://www.88i9bet.com/Register?a=1284708',
+}
+
 export const APP_ROUTERS = {
   HOME: '/',
   LIST: {
